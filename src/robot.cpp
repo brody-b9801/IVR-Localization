@@ -18,6 +18,12 @@ pros::adi::Encoder vertical_encoder('C', 'D', true);
 lemlib::TrackingWheel horizontal_tracking_wheel(&horizontal_encoder, lemlib::Omniwheel::NEW_275, -5.75);
 lemlib::TrackingWheel vertical_tracking_wheel(&vertical_encoder, lemlib::Omniwheel::NEW_275, -2.5);
 
+//Placeholders
+pros::Distance distanceFront(10);
+pros::Distance distanceLeft(11);
+pros::Distance distanceRight(12);
+pros::Distance distanceBack(13);
+
 lemlib::OdomSensors sensors(&vertical_tracking_wheel,
                             nullptr,
                             &horizontal_tracking_wheel, 
