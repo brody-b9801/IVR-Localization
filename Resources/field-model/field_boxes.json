@@ -1,0 +1,8246 @@
+{
+ "description": "V5RC field approximated by rectangular prisms, one per part instance of the field STEP (hardware excluded; game elements excluded).",
+ "source": "276-9250-000 (2026-04-26).STEP",
+ "units": "in",
+ "frame": {
+  "origin": "field centre, top surface of the foam tiles",
+  "x": "towards the blue alliance station (STEP +X)",
+  "y": "STEP -Z",
+  "z": "up (STEP +Y)"
+ },
+ "step_to_field": [
+  [
+   0.03937008,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   -0.03937008,
+   0.0
+  ],
+  [
+   0.0,
+   0.03937008,
+   0.0,
+   11.598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "box_format": "every box is axis-aligned in the field frame: min = [x, y, z] of its lowest corner, max = [x, y, z] of its highest corner",
+ "skipped_hardware": {
+  "276-7596-003": 72,
+  "276-7596-004_Compressed": 72,
+  "276-9250-027": 8,
+  "94629A270_Thread-Cutting Screws for Plastic_94629A270": 16,
+  "NNY_Imperial_275-1027-001": 56,
+  "SBT0832_276-4993-001": 16,
+  "SBT0832_276-5006-001": 32,
+  "SBT0832_276-5007-001": 48,
+  "SBT0832_276-8016-001": 16,
+  "SBT0832_SBT0832-1250ZC": 8,
+  "SBT0832_SBT0832-2500ZC": 16,
+  "SPTM3-TC_228-7045-010": 192,
+  "THF0832-0250_275-1014-001": 16,
+  "THF0832-0250_275-1020-001": 16,
+  "THF0832-0250_275-1023-001": 4
+ },
+ "boxes": [
+  {
+   "id": 0,
+   "category": "perimeter_foot",
+   "part": "276-8354-404",
+   "assembly": "",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.6377,
+    57.8882,
+    10.4186
+   ],
+   "max": [
+    -72.2046,
+    59.6382,
+    11.4186
+   ]
+  },
+  {
+   "id": 1,
+   "category": "tape",
+   "part": "Tape- Corner Zone_Red Loader Zone",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -59.6162,
+    45.9484,
+    0.0077
+   ],
+   "max": [
+    -58.8682,
+    71.2928,
+    0.0277
+   ]
+  },
+  {
+   "id": 2,
+   "category": "tape",
+   "part": "Tape- Corner Zone_Red Loader Zone",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -71.2107,
+    45.9484,
+    0.0077
+   ],
+   "max": [
+    -58.8682,
+    46.6964,
+    0.0277
+   ]
+  },
+  {
+   "id": 3,
+   "category": "alliance_bar",
+   "part": "276-9250-022",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    11.0,
+    70.1062,
+    10.6686
+   ],
+   "max": [
+    13.1304,
+    72.3031,
+    14.3549
+   ]
+  },
+  {
+   "id": 4,
+   "category": "alliance_bar",
+   "part": "276-9250-021",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    -13.1304,
+    70.1062,
+    10.6686
+   ],
+   "max": [
+    -11.0,
+    72.3031,
+    14.3549
+   ]
+  },
+  {
+   "id": 5,
+   "category": "alliance_bar",
+   "part": "276-9250-024",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    11.4409,
+    70.1076,
+    11.5579
+   ],
+   "max": [
+    13.5945,
+    73.0213,
+    14.4536
+   ]
+  },
+  {
+   "id": 6,
+   "category": "alliance_bar",
+   "part": "276-9250-023_GREY",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    -12.9173,
+    70.0805,
+    11.6263
+   ],
+   "max": [
+    12.9173,
+    72.9934,
+    14.4808
+   ]
+  },
+  {
+   "id": 7,
+   "category": "alliance_bar",
+   "part": "276-9250-024",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    -13.5945,
+    70.1077,
+    11.558
+   ],
+   "max": [
+    -11.4409,
+    73.0214,
+    14.4537
+   ]
+  },
+  {
+   "id": 8,
+   "category": "perimeter_foot",
+   "part": "276-8354-404",
+   "assembly": "",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    72.2046,
+    57.8882,
+    0.1546
+   ],
+   "max": [
+    72.6377,
+    59.6382,
+    1.1546
+   ]
+  },
+  {
+   "id": 9,
+   "category": "tape",
+   "part": "Tape- Corner Zone_Blue Loader Zone",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    58.8682,
+    -71.2928,
+    0.0077
+   ],
+   "max": [
+    59.6162,
+    -45.9484,
+    0.0277
+   ]
+  },
+  {
+   "id": 10,
+   "category": "tape",
+   "part": "Tape- Corner Zone_Blue Loader Zone",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    58.8682,
+    -46.6964,
+    0.0077
+   ],
+   "max": [
+    71.2107,
+    -45.9484,
+    0.0277
+   ]
+  },
+  {
+   "id": 11,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 1",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -48.1936,
+    21.521,
+    2.7532
+   ],
+   "max": [
+    -45.9889,
+    21.7156,
+    4.7552
+   ]
+  },
+  {
+   "id": 12,
+   "category": "goal",
+   "part": "276-9250-003_Master",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    -49.8968,
+    20.74,
+    2.5197
+   ],
+   "max": [
+    -44.2856,
+    26.3512,
+    5.769
+   ]
+  },
+  {
+   "id": 13,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 1",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -49.1158,
+    22.4432,
+    2.7532
+   ],
+   "max": [
+    -48.9212,
+    24.648,
+    4.7552
+   ]
+  },
+  {
+   "id": 14,
+   "category": "goal_base",
+   "part": "276-4847-011",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": true,
+   "dynamic": false,
+   "color": "#8a8e93",
+   "min": [
+    -52.9967,
+    17.6401,
+    -0.6673
+   ],
+   "max": [
+    -41.1857,
+    29.4511,
+    -0.4803
+   ]
+  },
+  {
+   "id": 15,
+   "category": "goal",
+   "part": "276-9250-004",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    -49.8988,
+    20.738,
+    0.0
+   ],
+   "max": [
+    -44.2836,
+    26.3532,
+    2.5197
+   ]
+  },
+  {
+   "id": 16,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 1",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -45.2612,
+    22.4432,
+    2.7532
+   ],
+   "max": [
+    -45.0666,
+    24.648,
+    4.7552
+   ]
+  },
+  {
+   "id": 17,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 1",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -48.1936,
+    25.3756,
+    2.7532
+   ],
+   "max": [
+    -45.9889,
+    25.5702,
+    4.7552
+   ]
+  },
+  {
+   "id": 18,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 4",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -24.648,
+    45.0666,
+    2.7532
+   ],
+   "max": [
+    -22.4432,
+    45.2612,
+    4.7552
+   ]
+  },
+  {
+   "id": 19,
+   "category": "goal",
+   "part": "276-9250-003_Master",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    -26.3512,
+    44.2856,
+    2.5197
+   ],
+   "max": [
+    -20.74,
+    49.8968,
+    5.769
+   ]
+  },
+  {
+   "id": 20,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 4",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -21.7156,
+    45.9889,
+    2.7532
+   ],
+   "max": [
+    -21.521,
+    48.1936,
+    4.7552
+   ]
+  },
+  {
+   "id": 21,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 4",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -24.648,
+    48.9212,
+    2.7532
+   ],
+   "max": [
+    -22.4432,
+    49.1158,
+    4.7552
+   ]
+  },
+  {
+   "id": 22,
+   "category": "goal",
+   "part": "276-9250-004",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    -26.3532,
+    44.2836,
+    0.0
+   ],
+   "max": [
+    -20.738,
+    49.8988,
+    2.5197
+   ]
+  },
+  {
+   "id": 23,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 4",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -25.5702,
+    45.9889,
+    2.7532
+   ],
+   "max": [
+    -25.3756,
+    48.1936,
+    4.7552
+   ]
+  },
+  {
+   "id": 24,
+   "category": "goal_base",
+   "part": "276-4847-011",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": true,
+   "dynamic": false,
+   "color": "#8a8e93",
+   "min": [
+    -29.4511,
+    41.1857,
+    -0.6673
+   ],
+   "max": [
+    -17.6401,
+    52.9967,
+    -0.4803
+   ]
+  },
+  {
+   "id": 25,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 2",
+   "assembly": "276-9250-840_Blue 2",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    48.9212,
+    22.4432,
+    0.2335
+   ],
+   "max": [
+    49.1158,
+    24.648,
+    2.2355
+   ]
+  },
+  {
+   "id": 26,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 2",
+   "assembly": "276-9250-840_Blue 2",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    45.9889,
+    25.3756,
+    0.2335
+   ],
+   "max": [
+    48.1936,
+    25.5702,
+    2.2355
+   ]
+  },
+  {
+   "id": 27,
+   "category": "goal_base",
+   "part": "276-4847-011",
+   "assembly": "276-9250-840_Blue 2",
+   "solid": true,
+   "dynamic": false,
+   "color": "#8a8e93",
+   "min": [
+    41.1857,
+    17.6401,
+    -0.687
+   ],
+   "max": [
+    52.9967,
+    29.4511,
+    -0.5
+   ]
+  },
+  {
+   "id": 28,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 2",
+   "assembly": "276-9250-840_Blue 2",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    45.0666,
+    22.4432,
+    0.2335
+   ],
+   "max": [
+    45.2612,
+    24.648,
+    2.2355
+   ]
+  },
+  {
+   "id": 29,
+   "category": "goal",
+   "part": "276-9250-003_Master",
+   "assembly": "276-9250-840_Blue 2",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    44.2856,
+    20.74,
+    0.0
+   ],
+   "max": [
+    49.8968,
+    26.3512,
+    3.2493
+   ]
+  },
+  {
+   "id": 30,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 2",
+   "assembly": "276-9250-840_Blue 2",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    45.9889,
+    21.521,
+    0.2335
+   ],
+   "max": [
+    48.1936,
+    21.7156,
+    2.2355
+   ]
+  },
+  {
+   "id": 31,
+   "category": "perimeter_foot",
+   "part": "276-8354-404",
+   "assembly": "",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    72.2046,
+    -59.6382,
+    0.1546
+   ],
+   "max": [
+    72.6377,
+    -57.8882,
+    1.1546
+   ]
+  },
+  {
+   "id": 32,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -0.3937,
+    -71.0305,
+    -0.6299
+   ],
+   "max": [
+    23.9393,
+    -46.6975,
+    0.0
+   ]
+  },
+  {
+   "id": 33,
+   "category": "perimeter_panel",
+   "part": "276-7596-014",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    -70.1907,
+    70.2826,
+    2.0
+   ],
+   "max": [
+    -24.4407,
+    70.3811,
+    9.4
+   ]
+  },
+  {
+   "id": 34,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    23.1519,
+    -0.3937,
+    -0.6299
+   ],
+   "max": [
+    47.4849,
+    23.9393,
+    0.0
+   ]
+  },
+  {
+   "id": 35,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -26.1252,
+    -72.12,
+    0.0852
+   ],
+   "max": [
+    -20.638,
+    -71.1259,
+    4.2436
+   ]
+  },
+  {
+   "id": 36,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -26.1253,
+    -71.4172,
+    0.085
+   ],
+   "max": [
+    -20.6379,
+    -70.2893,
+    4.2437
+   ]
+  },
+  {
+   "id": 37,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-305",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -23.3816,
+    70.1968,
+    9.0366
+   ],
+   "max": [
+    23.3816,
+    72.2046,
+    11.5366
+   ]
+  },
+  {
+   "id": 38,
+   "category": "perimeter_panel",
+   "part": "276-7596-014",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    -70.1907,
+    -70.3811,
+    2.0
+   ],
+   "max": [
+    -24.4407,
+    -70.2826,
+    9.4
+   ]
+  },
+  {
+   "id": 39,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-314",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -23.3816,
+    -72.2046,
+    -0.622
+   ],
+   "max": [
+    23.3816,
+    -70.2046,
+    2.5
+   ]
+  },
+  {
+   "id": 40,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    23.1519,
+    -23.9393,
+    -0.6299
+   ],
+   "max": [
+    47.4849,
+    0.3937,
+    0.0
+   ]
+  },
+  {
+   "id": 41,
+   "category": "perimeter_panel",
+   "part": "276-7596-015",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    -70.3811,
+    -22.375,
+    2.0
+   ],
+   "max": [
+    -70.2826,
+    22.375,
+    9.4
+   ]
+  },
+  {
+   "id": 42,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-313",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    23.3816,
+    -72.2046,
+    -0.622
+   ],
+   "max": [
+    70.1448,
+    -70.2046,
+    2.5
+   ]
+  },
+  {
+   "id": 43,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-307",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -72.2046,
+    23.3816,
+    9.0366
+   ],
+   "max": [
+    -70.1968,
+    70.1448,
+    11.5366
+   ]
+  },
+  {
+   "id": 44,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -0.3937,
+    -0.3937,
+    -0.6299
+   ],
+   "max": [
+    23.9393,
+    23.9393,
+    0.0
+   ]
+  },
+  {
+   "id": 45,
+   "category": "perimeter_panel",
+   "part": "276-7596-015",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    70.2826,
+    -22.375,
+    2.0
+   ],
+   "max": [
+    70.3811,
+    22.375,
+    9.4
+   ]
+  },
+  {
+   "id": 46,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-315",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -70.1448,
+    -72.2046,
+    -0.622
+   ],
+   "max": [
+    -23.3816,
+    -70.2046,
+    2.5
+   ]
+  },
+  {
+   "id": 47,
+   "category": "perimeter_foot",
+   "part": "276-7596-010",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.12,
+    -72.12,
+    2.8869
+   ],
+   "max": [
+    -70.2893,
+    -70.2893,
+    3.9263
+   ]
+  },
+  {
+   "id": 48,
+   "category": "perimeter_foot",
+   "part": "276-7596-008",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.2336,
+    -72.2336,
+    0.0
+   ],
+   "max": [
+    -67.4414,
+    -67.4414,
+    1.0787
+   ]
+  },
+  {
+   "id": 49,
+   "category": "perimeter_foot",
+   "part": "276-7596-009",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.2338,
+    -72.2338,
+    0.9606
+   ],
+   "max": [
+    -67.4412,
+    -67.4412,
+    2.9656
+   ]
+  },
+  {
+   "id": 50,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-315",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    70.2046,
+    -70.1448,
+    -0.622
+   ],
+   "max": [
+    72.2046,
+    -23.3816,
+    2.5
+   ]
+  },
+  {
+   "id": 51,
+   "category": "perimeter_post",
+   "part": "276-7596-316",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    21.8816,
+    -72.2046,
+    2.0006
+   ],
+   "max": [
+    24.8816,
+    -70.2046,
+    9.536
+   ]
+  },
+  {
+   "id": 52,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-313",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    70.2046,
+    23.3816,
+    -0.622
+   ],
+   "max": [
+    72.2046,
+    70.1448,
+    2.5
+   ]
+  },
+  {
+   "id": 53,
+   "category": "perimeter_panel",
+   "part": "276-7596-014",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    24.4407,
+    -70.3811,
+    2.0
+   ],
+   "max": [
+    70.1907,
+    -70.2826,
+    9.4
+   ]
+  },
+  {
+   "id": 54,
+   "category": "perimeter_foot",
+   "part": "276-7596-010",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.12,
+    70.2893,
+    2.8869
+   ],
+   "max": [
+    -70.2893,
+    72.12,
+    3.9263
+   ]
+  },
+  {
+   "id": 55,
+   "category": "perimeter_foot",
+   "part": "276-7596-008",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.2336,
+    67.4414,
+    0.0
+   ],
+   "max": [
+    -67.4414,
+    72.2336,
+    1.0787
+   ]
+  },
+  {
+   "id": 56,
+   "category": "perimeter_foot",
+   "part": "276-7596-009",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.2338,
+    67.4412,
+    0.9606
+   ],
+   "max": [
+    -67.4412,
+    72.2338,
+    2.9656
+   ]
+  },
+  {
+   "id": 57,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-313",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -72.2046,
+    -70.1448,
+    -0.622
+   ],
+   "max": [
+    -70.2046,
+    -23.3816,
+    2.5
+   ]
+  },
+  {
+   "id": 58,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    23.1519,
+    46.6975,
+    -0.6299
+   ],
+   "max": [
+    47.4849,
+    71.0305,
+    0.0
+   ]
+  },
+  {
+   "id": 59,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-314",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -72.2046,
+    -23.3816,
+    -0.622
+   ],
+   "max": [
+    -70.2046,
+    23.3816,
+    2.5
+   ]
+  },
+  {
+   "id": 60,
+   "category": "perimeter_post",
+   "part": "276-7596-317_Corner",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    -72.2046,
+    -72.2046,
+    2.0007
+   ],
+   "max": [
+    -69.9546,
+    -69.9546,
+    9.5361
+   ]
+  },
+  {
+   "id": 61,
+   "category": "perimeter_post",
+   "part": "276-7596-317_Corner",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    69.9546,
+    -72.2046,
+    2.0007
+   ],
+   "max": [
+    72.2046,
+    -69.9546,
+    9.5361
+   ]
+  },
+  {
+   "id": 62,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    20.638,
+    71.1259,
+    0.0852
+   ],
+   "max": [
+    26.1252,
+    72.12,
+    4.2436
+   ]
+  },
+  {
+   "id": 63,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    20.6379,
+    70.2893,
+    0.085
+   ],
+   "max": [
+    26.1253,
+    71.4172,
+    4.2437
+   ]
+  },
+  {
+   "id": 64,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    46.6975,
+    -47.4849,
+    -0.6299
+   ],
+   "max": [
+    71.0305,
+    -23.1519,
+    0.0
+   ]
+  },
+  {
+   "id": 65,
+   "category": "perimeter_panel",
+   "part": "276-7596-014",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    -70.3811,
+    24.4407,
+    2.0
+   ],
+   "max": [
+    -70.2826,
+    70.1907,
+    9.4
+   ]
+  },
+  {
+   "id": 66,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -47.4849,
+    46.6975,
+    -0.6299
+   ],
+   "max": [
+    -23.1519,
+    71.0305,
+    0.0
+   ]
+  },
+  {
+   "id": 67,
+   "category": "perimeter_post",
+   "part": "276-7596-316",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    21.8816,
+    70.2046,
+    2.0006
+   ],
+   "max": [
+    24.8816,
+    72.2046,
+    9.536
+   ]
+  },
+  {
+   "id": 68,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    71.1259,
+    -26.1252,
+    0.0852
+   ],
+   "max": [
+    72.12,
+    -20.638,
+    4.2436
+   ]
+  },
+  {
+   "id": 69,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    70.2893,
+    -26.1253,
+    0.085
+   ],
+   "max": [
+    71.4172,
+    -20.6379,
+    4.2437
+   ]
+  },
+  {
+   "id": 70,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -71.0305,
+    -47.4849,
+    -0.6299
+   ],
+   "max": [
+    -46.6975,
+    -23.1519,
+    0.0
+   ]
+  },
+  {
+   "id": 71,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-314",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -23.3816,
+    70.2046,
+    -0.622
+   ],
+   "max": [
+    23.3816,
+    72.2046,
+    2.5
+   ]
+  },
+  {
+   "id": 72,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    20.638,
+    -72.12,
+    7.293
+   ],
+   "max": [
+    26.1252,
+    -71.1259,
+    11.4514
+   ]
+  },
+  {
+   "id": 73,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    20.6379,
+    -71.4172,
+    7.2929
+   ],
+   "max": [
+    26.1253,
+    -70.2893,
+    11.4516
+   ]
+  },
+  {
+   "id": 74,
+   "category": "perimeter_post",
+   "part": "276-7596-316",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    -72.2046,
+    21.8816,
+    2.0006
+   ],
+   "max": [
+    -70.2046,
+    24.8816,
+    9.536
+   ]
+  },
+  {
+   "id": 75,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-303",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    70.1968,
+    23.3816,
+    9.0366
+   ],
+   "max": [
+    72.2046,
+    70.1448,
+    11.5366
+   ]
+  },
+  {
+   "id": 76,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    23.1519,
+    23.1519,
+    -0.6299
+   ],
+   "max": [
+    47.4849,
+    47.4849,
+    0.0
+   ]
+  },
+  {
+   "id": 77,
+   "category": "perimeter_panel",
+   "part": "276-7596-014",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    70.2826,
+    -70.1907,
+    2.0
+   ],
+   "max": [
+    70.3811,
+    -24.4407,
+    9.4
+   ]
+  },
+  {
+   "id": 78,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-315",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    23.3816,
+    70.2046,
+    -0.622
+   ],
+   "max": [
+    70.1448,
+    72.2046,
+    2.5
+   ]
+  },
+  {
+   "id": 79,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-311",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -23.3816,
+    -72.2046,
+    9.0366
+   ],
+   "max": [
+    23.3816,
+    -70.1968,
+    11.5366
+   ]
+  },
+  {
+   "id": 80,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    20.638,
+    -72.12,
+    0.0852
+   ],
+   "max": [
+    26.1252,
+    -71.1259,
+    4.2436
+   ]
+  },
+  {
+   "id": 81,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    20.6379,
+    -71.4172,
+    0.085
+   ],
+   "max": [
+    26.1253,
+    -70.2893,
+    4.2437
+   ]
+  },
+  {
+   "id": 82,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.12,
+    -26.1252,
+    7.293
+   ],
+   "max": [
+    -71.1259,
+    -20.638,
+    11.4514
+   ]
+  },
+  {
+   "id": 83,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -71.4172,
+    -26.1253,
+    7.2929
+   ],
+   "max": [
+    -70.2893,
+    -20.6379,
+    11.4516
+   ]
+  },
+  {
+   "id": 84,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -71.0305,
+    23.1519,
+    -0.6299
+   ],
+   "max": [
+    -46.6975,
+    47.4849,
+    0.0
+   ]
+  },
+  {
+   "id": 85,
+   "category": "perimeter_foot",
+   "part": "276-7596-010",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.12,
+    -72.12,
+    7.6105
+   ],
+   "max": [
+    -70.2893,
+    -70.2893,
+    8.6499
+   ]
+  },
+  {
+   "id": 86,
+   "category": "perimeter_foot",
+   "part": "276-7596-008",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.2336,
+    -72.2336,
+    10.4581
+   ],
+   "max": [
+    -67.4414,
+    -67.4414,
+    11.5368
+   ]
+  },
+  {
+   "id": 87,
+   "category": "perimeter_foot",
+   "part": "276-7596-009",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.2338,
+    -72.2338,
+    8.5712
+   ],
+   "max": [
+    -67.4412,
+    -67.4412,
+    10.5762
+   ]
+  },
+  {
+   "id": 88,
+   "category": "perimeter_post",
+   "part": "276-7596-317_Corner",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    69.9546,
+    69.9546,
+    2.0007
+   ],
+   "max": [
+    72.2046,
+    72.2046,
+    9.5361
+   ]
+  },
+  {
+   "id": 89,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.12,
+    -26.1252,
+    0.0852
+   ],
+   "max": [
+    -71.1259,
+    -20.638,
+    4.2436
+   ]
+  },
+  {
+   "id": 90,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -71.4172,
+    -26.1253,
+    0.085
+   ],
+   "max": [
+    -70.2893,
+    -20.6379,
+    4.2437
+   ]
+  },
+  {
+   "id": 91,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -47.4849,
+    -47.4849,
+    -0.6299
+   ],
+   "max": [
+    -23.1519,
+    -23.1519,
+    0.0
+   ]
+  },
+  {
+   "id": 92,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.12,
+    20.638,
+    7.293
+   ],
+   "max": [
+    -71.1259,
+    26.1252,
+    11.4514
+   ]
+  },
+  {
+   "id": 93,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -71.4172,
+    20.6379,
+    7.2929
+   ],
+   "max": [
+    -70.2893,
+    26.1253,
+    11.4516
+   ]
+  },
+  {
+   "id": 94,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    71.1259,
+    -26.1252,
+    7.293
+   ],
+   "max": [
+    72.12,
+    -20.638,
+    11.4514
+   ]
+  },
+  {
+   "id": 95,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    70.2893,
+    -26.1253,
+    7.2929
+   ],
+   "max": [
+    71.4172,
+    -20.6379,
+    11.4516
+   ]
+  },
+  {
+   "id": 96,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-304",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    23.3816,
+    70.1968,
+    9.0366
+   ],
+   "max": [
+    70.1448,
+    72.2046,
+    11.5366
+   ]
+  },
+  {
+   "id": 97,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    46.6975,
+    -23.9393,
+    -0.6299
+   ],
+   "max": [
+    71.0305,
+    0.3937,
+    0.0
+   ]
+  },
+  {
+   "id": 98,
+   "category": "perimeter_foot",
+   "part": "276-7596-010",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    70.2893,
+    -72.12,
+    2.8869
+   ],
+   "max": [
+    72.12,
+    -70.2893,
+    3.9263
+   ]
+  },
+  {
+   "id": 99,
+   "category": "perimeter_foot",
+   "part": "276-7596-008",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    67.4414,
+    -72.2336,
+    0.0
+   ],
+   "max": [
+    72.2336,
+    -67.4414,
+    1.0787
+   ]
+  },
+  {
+   "id": 100,
+   "category": "perimeter_foot",
+   "part": "276-7596-009",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    67.4412,
+    -72.2338,
+    0.9606
+   ],
+   "max": [
+    72.2338,
+    -67.4412,
+    2.9656
+   ]
+  },
+  {
+   "id": 101,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -71.0305,
+    -0.3937,
+    -0.6299
+   ],
+   "max": [
+    -46.6975,
+    23.9393,
+    0.0
+   ]
+  },
+  {
+   "id": 102,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    46.6975,
+    -71.0305,
+    -0.6299
+   ],
+   "max": [
+    71.0305,
+    -46.6975,
+    0.0
+   ]
+  },
+  {
+   "id": 103,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-314",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    70.2046,
+    -23.3816,
+    -0.622
+   ],
+   "max": [
+    72.2046,
+    23.3816,
+    2.5
+   ]
+  },
+  {
+   "id": 104,
+   "category": "perimeter_post",
+   "part": "276-7596-316",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    -72.2046,
+    -24.8816,
+    2.0006
+   ],
+   "max": [
+    -70.2046,
+    -21.8816,
+    9.536
+   ]
+  },
+  {
+   "id": 105,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -0.3937,
+    -23.9393,
+    -0.6299
+   ],
+   "max": [
+    23.9393,
+    0.3937,
+    0.0
+   ]
+  },
+  {
+   "id": 106,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -23.9393,
+    23.1519,
+    -0.6299
+   ],
+   "max": [
+    0.3937,
+    47.4849,
+    0.0
+   ]
+  },
+  {
+   "id": 107,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -0.3937,
+    23.1519,
+    -0.6299
+   ],
+   "max": [
+    23.9393,
+    47.4849,
+    0.0
+   ]
+  },
+  {
+   "id": 108,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -71.0305,
+    -23.9393,
+    -0.6299
+   ],
+   "max": [
+    -46.6975,
+    0.3937,
+    0.0
+   ]
+  },
+  {
+   "id": 109,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    23.1519,
+    -71.0305,
+    -0.6299
+   ],
+   "max": [
+    47.4849,
+    -46.6975,
+    0.0
+   ]
+  },
+  {
+   "id": 110,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    23.1519,
+    -47.4849,
+    -0.6299
+   ],
+   "max": [
+    47.4849,
+    -23.1519,
+    0.0
+   ]
+  },
+  {
+   "id": 111,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-313",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -70.1448,
+    70.2046,
+    -0.622
+   ],
+   "max": [
+    -23.3816,
+    72.2046,
+    2.5
+   ]
+  },
+  {
+   "id": 112,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    71.1259,
+    20.638,
+    7.293
+   ],
+   "max": [
+    72.12,
+    26.1252,
+    11.4514
+   ]
+  },
+  {
+   "id": 113,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    70.2893,
+    20.6379,
+    7.2929
+   ],
+   "max": [
+    71.4172,
+    26.1253,
+    11.4516
+   ]
+  },
+  {
+   "id": 114,
+   "category": "perimeter_foot",
+   "part": "276-7596-010",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    70.2893,
+    70.2893,
+    7.6105
+   ],
+   "max": [
+    72.12,
+    72.12,
+    8.6499
+   ]
+  },
+  {
+   "id": 115,
+   "category": "perimeter_foot",
+   "part": "276-7596-008",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    67.4414,
+    67.4414,
+    10.4581
+   ],
+   "max": [
+    72.2336,
+    72.2336,
+    11.5368
+   ]
+  },
+  {
+   "id": 116,
+   "category": "perimeter_foot",
+   "part": "276-7596-009",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    67.4412,
+    67.4412,
+    8.5712
+   ],
+   "max": [
+    72.2338,
+    72.2338,
+    10.5762
+   ]
+  },
+  {
+   "id": 117,
+   "category": "perimeter_post",
+   "part": "276-7596-316",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    70.2046,
+    21.8816,
+    2.0006
+   ],
+   "max": [
+    72.2046,
+    24.8816,
+    9.536
+   ]
+  },
+  {
+   "id": 118,
+   "category": "perimeter_panel",
+   "part": "276-7596-015",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    -22.375,
+    -70.3811,
+    2.0
+   ],
+   "max": [
+    22.375,
+    -70.2826,
+    9.4
+   ]
+  },
+  {
+   "id": 119,
+   "category": "perimeter_post",
+   "part": "276-7596-317_Corner",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    -72.2046,
+    69.9546,
+    2.0007
+   ],
+   "max": [
+    -69.9546,
+    72.2046,
+    9.5361
+   ]
+  },
+  {
+   "id": 120,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -23.9393,
+    -0.3937,
+    -0.6299
+   ],
+   "max": [
+    0.3937,
+    23.9393,
+    0.0
+   ]
+  },
+  {
+   "id": 121,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-308",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -72.2046,
+    -23.3816,
+    9.0366
+   ],
+   "max": [
+    -70.1968,
+    23.3816,
+    11.5366
+   ]
+  },
+  {
+   "id": 122,
+   "category": "perimeter_panel",
+   "part": "276-7596-015",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    -22.375,
+    70.2826,
+    2.0
+   ],
+   "max": [
+    22.375,
+    70.3811,
+    9.4
+   ]
+  },
+  {
+   "id": 123,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-302",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    70.1968,
+    -23.3816,
+    9.0366
+   ],
+   "max": [
+    72.2046,
+    23.3816,
+    11.5366
+   ]
+  },
+  {
+   "id": 124,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -47.4849,
+    -23.9393,
+    -0.6299
+   ],
+   "max": [
+    -23.1519,
+    0.3937,
+    0.0
+   ]
+  },
+  {
+   "id": 125,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -23.9393,
+    -71.0305,
+    -0.6299
+   ],
+   "max": [
+    0.3937,
+    -46.6975,
+    0.0
+   ]
+  },
+  {
+   "id": 126,
+   "category": "perimeter_panel",
+   "part": "276-7596-014",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    -70.3811,
+    -70.1907,
+    2.0
+   ],
+   "max": [
+    -70.2826,
+    -24.4407,
+    9.4
+   ]
+  },
+  {
+   "id": 127,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -47.4849,
+    23.1519,
+    -0.6299
+   ],
+   "max": [
+    -23.1519,
+    47.4849,
+    0.0
+   ]
+  },
+  {
+   "id": 128,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -26.1252,
+    -72.12,
+    7.293
+   ],
+   "max": [
+    -20.638,
+    -71.1259,
+    11.4514
+   ]
+  },
+  {
+   "id": 129,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -26.1253,
+    -71.4172,
+    7.2929
+   ],
+   "max": [
+    -20.6379,
+    -70.2893,
+    11.4516
+   ]
+  },
+  {
+   "id": 130,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-310",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -70.1448,
+    -72.2046,
+    9.0366
+   ],
+   "max": [
+    -23.3816,
+    -70.1968,
+    11.5366
+   ]
+  },
+  {
+   "id": 131,
+   "category": "perimeter_foot",
+   "part": "276-7596-010",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    70.2893,
+    70.2893,
+    2.8869
+   ],
+   "max": [
+    72.12,
+    72.12,
+    3.9263
+   ]
+  },
+  {
+   "id": 132,
+   "category": "perimeter_foot",
+   "part": "276-7596-008",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    67.4414,
+    67.4414,
+    0.0
+   ],
+   "max": [
+    72.2336,
+    72.2336,
+    1.0787
+   ]
+  },
+  {
+   "id": 133,
+   "category": "perimeter_foot",
+   "part": "276-7596-009",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    67.4412,
+    67.4412,
+    0.9606
+   ],
+   "max": [
+    72.2338,
+    72.2338,
+    2.9656
+   ]
+  },
+  {
+   "id": 134,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    71.1259,
+    20.638,
+    0.0852
+   ],
+   "max": [
+    72.12,
+    26.1252,
+    4.2436
+   ]
+  },
+  {
+   "id": 135,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    70.2893,
+    20.6379,
+    0.085
+   ],
+   "max": [
+    71.4172,
+    26.1253,
+    4.2437
+   ]
+  },
+  {
+   "id": 136,
+   "category": "perimeter_foot",
+   "part": "276-7596-010",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    70.2893,
+    -72.12,
+    7.6105
+   ],
+   "max": [
+    72.12,
+    -70.2893,
+    8.6499
+   ]
+  },
+  {
+   "id": 137,
+   "category": "perimeter_foot",
+   "part": "276-7596-008",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    67.4414,
+    -72.2336,
+    10.4581
+   ],
+   "max": [
+    72.2336,
+    -67.4414,
+    11.5368
+   ]
+  },
+  {
+   "id": 138,
+   "category": "perimeter_foot",
+   "part": "276-7596-009",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    67.4412,
+    -72.2338,
+    8.5712
+   ],
+   "max": [
+    72.2338,
+    -67.4412,
+    10.5762
+   ]
+  },
+  {
+   "id": 139,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -47.4849,
+    -0.3937,
+    -0.6299
+   ],
+   "max": [
+    -23.1519,
+    23.9393,
+    0.0
+   ]
+  },
+  {
+   "id": 140,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    46.6975,
+    -0.3937,
+    -0.6299
+   ],
+   "max": [
+    71.0305,
+    23.9393,
+    0.0
+   ]
+  },
+  {
+   "id": 141,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -0.3937,
+    46.6975,
+    -0.6299
+   ],
+   "max": [
+    23.9393,
+    71.0305,
+    0.0
+   ]
+  },
+  {
+   "id": 142,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    20.638,
+    71.1259,
+    7.293
+   ],
+   "max": [
+    26.1252,
+    72.12,
+    11.4514
+   ]
+  },
+  {
+   "id": 143,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    20.6379,
+    70.2893,
+    7.2929
+   ],
+   "max": [
+    26.1253,
+    71.4172,
+    11.4516
+   ]
+  },
+  {
+   "id": 144,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    46.6975,
+    46.6975,
+    -0.6299
+   ],
+   "max": [
+    71.0305,
+    71.0305,
+    0.0
+   ]
+  },
+  {
+   "id": 145,
+   "category": "perimeter_post",
+   "part": "276-7596-316",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    -24.8816,
+    70.2046,
+    2.0006
+   ],
+   "max": [
+    -21.8816,
+    72.2046,
+    9.536
+   ]
+  },
+  {
+   "id": 146,
+   "category": "perimeter_post",
+   "part": "276-7596-316",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    70.2046,
+    -24.8816,
+    2.0006
+   ],
+   "max": [
+    72.2046,
+    -21.8816,
+    9.536
+   ]
+  },
+  {
+   "id": 147,
+   "category": "perimeter_post",
+   "part": "276-7596-316",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#a9adb2",
+   "min": [
+    -24.8816,
+    -72.2046,
+    2.0006
+   ],
+   "max": [
+    -21.8816,
+    -70.2046,
+    9.536
+   ]
+  },
+  {
+   "id": 148,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -0.3937,
+    -47.4849,
+    -0.6299
+   ],
+   "max": [
+    23.9393,
+    -23.1519,
+    0.0
+   ]
+  },
+  {
+   "id": 149,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -23.9393,
+    -23.9393,
+    -0.6299
+   ],
+   "max": [
+    0.3937,
+    0.3937,
+    0.0
+   ]
+  },
+  {
+   "id": 150,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    46.6975,
+    23.1519,
+    -0.6299
+   ],
+   "max": [
+    71.0305,
+    47.4849,
+    0.0
+   ]
+  },
+  {
+   "id": 151,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-309",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -72.2046,
+    -70.1448,
+    9.0366
+   ],
+   "max": [
+    -70.1968,
+    -23.3816,
+    11.5366
+   ]
+  },
+  {
+   "id": 152,
+   "category": "perimeter_rail",
+   "part": "276-7596-351_276-7596-315",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -72.2046,
+    23.3816,
+    -0.622
+   ],
+   "max": [
+    -70.2046,
+    70.1448,
+    2.5
+   ]
+  },
+  {
+   "id": 153,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-301",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    70.1968,
+    -70.1448,
+    9.0366
+   ],
+   "max": [
+    72.2046,
+    -23.3816,
+    11.5366
+   ]
+  },
+  {
+   "id": 154,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -71.0305,
+    -71.0305,
+    -0.6299
+   ],
+   "max": [
+    -46.6975,
+    -46.6975,
+    0.0
+   ]
+  },
+  {
+   "id": 155,
+   "category": "perimeter_panel",
+   "part": "276-7596-014",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    24.4407,
+    70.2826,
+    2.0
+   ],
+   "max": [
+    70.1907,
+    70.3811,
+    9.4
+   ]
+  },
+  {
+   "id": 156,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -26.1252,
+    71.1259,
+    0.0852
+   ],
+   "max": [
+    -20.638,
+    72.12,
+    4.2436
+   ]
+  },
+  {
+   "id": 157,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -26.1253,
+    70.2893,
+    0.085
+   ],
+   "max": [
+    -20.6379,
+    71.4172,
+    4.2437
+   ]
+  },
+  {
+   "id": 158,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -47.4849,
+    -71.0305,
+    -0.6299
+   ],
+   "max": [
+    -23.1519,
+    -46.6975,
+    0.0
+   ]
+  },
+  {
+   "id": 159,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -71.0305,
+    46.6975,
+    -0.6299
+   ],
+   "max": [
+    -46.6975,
+    71.0305,
+    0.0
+   ]
+  },
+  {
+   "id": 160,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -23.9393,
+    -47.4849,
+    -0.6299
+   ],
+   "max": [
+    0.3937,
+    -23.1519,
+    0.0
+   ]
+  },
+  {
+   "id": 161,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -26.1252,
+    71.1259,
+    7.293
+   ],
+   "max": [
+    -20.638,
+    72.12,
+    11.4514
+   ]
+  },
+  {
+   "id": 162,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -26.1253,
+    70.2893,
+    7.2929
+   ],
+   "max": [
+    -20.6379,
+    71.4172,
+    11.4516
+   ]
+  },
+  {
+   "id": 163,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-306",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    -70.1448,
+    70.1968,
+    9.0366
+   ],
+   "max": [
+    -23.3816,
+    72.2046,
+    11.5366
+   ]
+  },
+  {
+   "id": 164,
+   "category": "perimeter_foot",
+   "part": "276-7596-005",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.12,
+    20.638,
+    0.0852
+   ],
+   "max": [
+    -71.1259,
+    26.1252,
+    4.2436
+   ]
+  },
+  {
+   "id": 165,
+   "category": "perimeter_foot",
+   "part": "276-7596-006",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-100",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -71.4172,
+    20.6379,
+    0.085
+   ],
+   "max": [
+    -70.2893,
+    26.1253,
+    4.2437
+   ]
+  },
+  {
+   "id": 166,
+   "category": "perimeter_foot",
+   "part": "276-7596-010",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.12,
+    70.2893,
+    7.6105
+   ],
+   "max": [
+    -70.2893,
+    72.12,
+    8.6499
+   ]
+  },
+  {
+   "id": 167,
+   "category": "perimeter_foot",
+   "part": "276-7596-008",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.2336,
+    67.4414,
+    10.4581
+   ],
+   "max": [
+    -67.4414,
+    72.2336,
+    11.5368
+   ]
+  },
+  {
+   "id": 168,
+   "category": "perimeter_foot",
+   "part": "276-7596-009",
+   "assembly": "276-7596-000_Fixed Version / 276-7596-200",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.2338,
+    67.4412,
+    8.5712
+   ],
+   "max": [
+    -67.4412,
+    72.2338,
+    10.5762
+   ]
+  },
+  {
+   "id": 169,
+   "category": "floor_tile",
+   "part": "276-6904-001",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": false,
+   "dynamic": false,
+   "color": "#6b6f75",
+   "min": [
+    -23.9393,
+    46.6975,
+    -0.6299
+   ],
+   "max": [
+    0.3937,
+    71.0305,
+    0.0
+   ]
+  },
+  {
+   "id": 170,
+   "category": "perimeter_panel",
+   "part": "276-7596-014",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#bcd7e0",
+   "min": [
+    70.2826,
+    24.4407,
+    2.0
+   ],
+   "max": [
+    70.3811,
+    70.1907,
+    9.4
+   ]
+  },
+  {
+   "id": 171,
+   "category": "perimeter_rail",
+   "part": "276-7596-350_276-7596-312",
+   "assembly": "276-7596-000_Fixed Version",
+   "solid": true,
+   "dynamic": false,
+   "color": "#c4c8cc",
+   "min": [
+    23.3816,
+    -72.2046,
+    9.0366
+   ],
+   "max": [
+    70.1448,
+    -70.1968,
+    11.5366
+   ]
+  },
+  {
+   "id": 172,
+   "category": "tape",
+   "part": "Tape- Corner Zone_Blue Loader Zone",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    58.8682,
+    45.9484,
+    0.0077
+   ],
+   "max": [
+    59.6162,
+    71.2928,
+    0.0277
+   ]
+  },
+  {
+   "id": 173,
+   "category": "tape",
+   "part": "Tape- Corner Zone_Blue Loader Zone",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    58.8682,
+    45.9484,
+    0.0077
+   ],
+   "max": [
+    71.2107,
+    46.6964,
+    0.0277
+   ]
+  },
+  {
+   "id": 174,
+   "category": "perimeter_foot",
+   "part": "276-8354-404",
+   "assembly": "",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.6377,
+    57.8882,
+    0.1546
+   ],
+   "max": [
+    -72.2046,
+    59.6382,
+    1.1546
+   ]
+  },
+  {
+   "id": 175,
+   "category": "alliance_station",
+   "part": "Wall Alliance Stations_PMS 199c - Bright Red",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -118.6772,
+    -58.0,
+    -0.6299
+   ],
+   "max": [
+    -82.6772,
+    -56.0,
+    -0.5906
+   ]
+  },
+  {
+   "id": 176,
+   "category": "alliance_station",
+   "part": "Wall Alliance Stations_PMS 199c - Bright Red",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -84.6772,
+    -58.0,
+    -0.6299
+   ],
+   "max": [
+    -82.6772,
+    58.0,
+    -0.5906
+   ]
+  },
+  {
+   "id": 177,
+   "category": "alliance_station",
+   "part": "Wall Alliance Stations_PMS 199c - Bright Red",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -118.6772,
+    56.0,
+    -0.6299
+   ],
+   "max": [
+    -82.6772,
+    58.0,
+    -0.5906
+   ]
+  },
+  {
+   "id": 178,
+   "category": "alliance_bar",
+   "part": "276-9250-022",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    70.1062,
+    -13.1304,
+    10.6686
+   ],
+   "max": [
+    72.3031,
+    -11.0,
+    14.3549
+   ]
+  },
+  {
+   "id": 179,
+   "category": "alliance_bar",
+   "part": "276-9250-021",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    70.1062,
+    11.0,
+    10.6686
+   ],
+   "max": [
+    72.3031,
+    13.1304,
+    14.3549
+   ]
+  },
+  {
+   "id": 180,
+   "category": "alliance_bar",
+   "part": "276-9250-024",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    70.1076,
+    -13.5945,
+    11.5579
+   ],
+   "max": [
+    73.0213,
+    -11.4409,
+    14.4536
+   ]
+  },
+  {
+   "id": 181,
+   "category": "alliance_bar",
+   "part": "276-9250-023_GREY",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    70.0805,
+    -12.9173,
+    11.6263
+   ],
+   "max": [
+    72.9934,
+    12.9173,
+    14.4808
+   ]
+  },
+  {
+   "id": 182,
+   "category": "alliance_bar",
+   "part": "276-9250-024",
+   "assembly": "276-9250-120_Blue Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    70.1077,
+    11.4409,
+    11.558
+   ],
+   "max": [
+    73.0214,
+    13.5945,
+    14.4537
+   ]
+  },
+  {
+   "id": 183,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 2",
+   "assembly": "276-9250-840_Red 2",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -45.2612,
+    -24.648,
+    0.2335
+   ],
+   "max": [
+    -45.0666,
+    -22.4432,
+    2.2355
+   ]
+  },
+  {
+   "id": 184,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 2",
+   "assembly": "276-9250-840_Red 2",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -49.1158,
+    -24.648,
+    0.2335
+   ],
+   "max": [
+    -48.9212,
+    -22.4432,
+    2.2355
+   ]
+  },
+  {
+   "id": 185,
+   "category": "goal_base",
+   "part": "276-4847-011",
+   "assembly": "276-9250-840_Red 2",
+   "solid": true,
+   "dynamic": false,
+   "color": "#8a8e93",
+   "min": [
+    -52.9967,
+    -29.4511,
+    -0.687
+   ],
+   "max": [
+    -41.1857,
+    -17.6401,
+    -0.5
+   ]
+  },
+  {
+   "id": 186,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 2",
+   "assembly": "276-9250-840_Red 2",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -48.1936,
+    -21.7156,
+    0.2335
+   ],
+   "max": [
+    -45.9889,
+    -21.521,
+    2.2355
+   ]
+  },
+  {
+   "id": 187,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 2",
+   "assembly": "276-9250-840_Red 2",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -48.1936,
+    -25.5702,
+    0.2335
+   ],
+   "max": [
+    -45.9889,
+    -25.3756,
+    2.2355
+   ]
+  },
+  {
+   "id": 188,
+   "category": "goal",
+   "part": "276-9250-003_Master",
+   "assembly": "276-9250-840_Red 2",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -49.8968,
+    -26.3512,
+    0.0
+   ],
+   "max": [
+    -44.2856,
+    -20.74,
+    3.2493
+   ]
+  },
+  {
+   "id": 189,
+   "category": "goal_base",
+   "part": "276-4847-011",
+   "assembly": "276-9250-840_Blue 3",
+   "solid": true,
+   "dynamic": false,
+   "color": "#8a8e93",
+   "min": [
+    17.6401,
+    41.1857,
+    -0.687
+   ],
+   "max": [
+    29.4511,
+    52.9967,
+    -0.5
+   ]
+  },
+  {
+   "id": 190,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 3",
+   "assembly": "276-9250-840_Blue 3",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    21.521,
+    45.9889,
+    0.2335
+   ],
+   "max": [
+    21.7156,
+    48.1936,
+    2.2355
+   ]
+  },
+  {
+   "id": 191,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 3",
+   "assembly": "276-9250-840_Blue 3",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    22.4432,
+    45.0666,
+    0.2335
+   ],
+   "max": [
+    24.648,
+    45.2612,
+    2.2355
+   ]
+  },
+  {
+   "id": 192,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 3",
+   "assembly": "276-9250-840_Blue 3",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    22.4432,
+    48.9212,
+    0.2335
+   ],
+   "max": [
+    24.648,
+    49.1158,
+    2.2355
+   ]
+  },
+  {
+   "id": 193,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 3",
+   "assembly": "276-9250-840_Blue 3",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    25.3756,
+    45.9889,
+    0.2335
+   ],
+   "max": [
+    25.5702,
+    48.1936,
+    2.2355
+   ]
+  },
+  {
+   "id": 194,
+   "category": "goal",
+   "part": "276-9250-003_Master",
+   "assembly": "276-9250-840_Blue 3",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    20.74,
+    44.2856,
+    0.0
+   ],
+   "max": [
+    26.3512,
+    49.8968,
+    3.2493
+   ]
+  },
+  {
+   "id": 195,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 0",
+   "assembly": "276-9250-840_Neutral Goal 0",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    1.83,
+    -1.1024,
+    5.7532
+   ],
+   "max": [
+    2.0246,
+    1.1024,
+    7.7552
+   ]
+  },
+  {
+   "id": 196,
+   "category": "goal",
+   "part": "276-9250-005",
+   "assembly": "276-9250-840_Neutral Goal 0",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    -2.8076,
+    -2.8076,
+    0.0
+   ],
+   "max": [
+    2.8076,
+    2.8076,
+    5.5197
+   ]
+  },
+  {
+   "id": 197,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 0",
+   "assembly": "276-9250-840_Neutral Goal 0",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -2.0246,
+    -1.1024,
+    5.7532
+   ],
+   "max": [
+    -1.83,
+    1.1024,
+    7.7552
+   ]
+  },
+  {
+   "id": 198,
+   "category": "goal",
+   "part": "276-9250-003_Master",
+   "assembly": "276-9250-840_Neutral Goal 0",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    -2.8056,
+    -2.8056,
+    5.5197
+   ],
+   "max": [
+    2.8056,
+    2.8056,
+    8.769
+   ]
+  },
+  {
+   "id": 199,
+   "category": "goal_base",
+   "part": "276-4847-011",
+   "assembly": "276-9250-840_Neutral Goal 0",
+   "solid": true,
+   "dynamic": false,
+   "color": "#8a8e93",
+   "min": [
+    -5.9055,
+    -5.9055,
+    -0.6673
+   ],
+   "max": [
+    5.9055,
+    5.9055,
+    -0.4803
+   ]
+  },
+  {
+   "id": 200,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 0",
+   "assembly": "276-9250-840_Neutral Goal 0",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -1.1024,
+    -2.0246,
+    5.7532
+   ],
+   "max": [
+    1.1024,
+    -1.83,
+    7.7552
+   ]
+  },
+  {
+   "id": 201,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 0",
+   "assembly": "276-9250-840_Neutral Goal 0",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -1.1024,
+    1.83,
+    5.7532
+   ],
+   "max": [
+    1.1024,
+    2.0246,
+    7.7552
+   ]
+  },
+  {
+   "id": 202,
+   "category": "alliance_bar",
+   "part": "276-9250-023_GREY",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -72.9934,
+    -12.9173,
+    11.6263
+   ],
+   "max": [
+    -70.0805,
+    12.9173,
+    14.4808
+   ]
+  },
+  {
+   "id": 203,
+   "category": "alliance_bar",
+   "part": "276-9250-021",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -72.3031,
+    -13.1304,
+    10.6686
+   ],
+   "max": [
+    -70.1062,
+    -11.0,
+    14.3549
+   ]
+  },
+  {
+   "id": 204,
+   "category": "alliance_bar",
+   "part": "276-9250-024",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -73.0213,
+    11.4409,
+    11.5579
+   ],
+   "max": [
+    -70.1076,
+    13.5945,
+    14.4536
+   ]
+  },
+  {
+   "id": 205,
+   "category": "alliance_bar",
+   "part": "276-9250-022",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -72.3031,
+    11.0,
+    10.6686
+   ],
+   "max": [
+    -70.1062,
+    13.1304,
+    14.3549
+   ]
+  },
+  {
+   "id": 206,
+   "category": "alliance_bar",
+   "part": "276-9250-024",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -73.0214,
+    -13.5945,
+    11.558
+   ],
+   "max": [
+    -70.1077,
+    -11.4409,
+    14.4537
+   ]
+  },
+  {
+   "id": 207,
+   "category": "perimeter_foot",
+   "part": "276-8354-404",
+   "assembly": "",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.6377,
+    -59.6382,
+    10.4186
+   ],
+   "max": [
+    -72.2046,
+    -57.8882,
+    11.4186
+   ]
+  },
+  {
+   "id": 208,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 3",
+   "assembly": "276-9250-840_Red 3",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -21.7156,
+    -48.1936,
+    0.2335
+   ],
+   "max": [
+    -21.521,
+    -45.9889,
+    2.2355
+   ]
+  },
+  {
+   "id": 209,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 3",
+   "assembly": "276-9250-840_Red 3",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -24.648,
+    -49.1158,
+    0.2335
+   ],
+   "max": [
+    -22.4432,
+    -48.9212,
+    2.2355
+   ]
+  },
+  {
+   "id": 210,
+   "category": "goal",
+   "part": "276-9250-003_Master",
+   "assembly": "276-9250-840_Red 3",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -26.3512,
+    -49.8968,
+    0.0
+   ],
+   "max": [
+    -20.74,
+    -44.2856,
+    3.2493
+   ]
+  },
+  {
+   "id": 211,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 3",
+   "assembly": "276-9250-840_Red 3",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -25.5702,
+    -48.1936,
+    0.2335
+   ],
+   "max": [
+    -25.3756,
+    -45.9889,
+    2.2355
+   ]
+  },
+  {
+   "id": 212,
+   "category": "goal_base",
+   "part": "276-4847-011",
+   "assembly": "276-9250-840_Red 3",
+   "solid": true,
+   "dynamic": false,
+   "color": "#8a8e93",
+   "min": [
+    -29.4511,
+    -52.9967,
+    -0.687
+   ],
+   "max": [
+    -17.6401,
+    -41.1857,
+    -0.5
+   ]
+  },
+  {
+   "id": 213,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 3",
+   "assembly": "276-9250-840_Red 3",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    -24.648,
+    -45.2612,
+    0.2335
+   ],
+   "max": [
+    -22.4432,
+    -45.0666,
+    2.2355
+   ]
+  },
+  {
+   "id": 214,
+   "category": "perimeter_foot",
+   "part": "276-8354-404",
+   "assembly": "",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    72.2046,
+    57.8882,
+    10.4186
+   ],
+   "max": [
+    72.6377,
+    59.6382,
+    11.4186
+   ]
+  },
+  {
+   "id": 215,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 4",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    22.4432,
+    -49.1158,
+    2.7532
+   ],
+   "max": [
+    24.648,
+    -48.9212,
+    4.7552
+   ]
+  },
+  {
+   "id": 216,
+   "category": "goal",
+   "part": "276-9250-003_Master",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    20.74,
+    -49.8968,
+    2.5197
+   ],
+   "max": [
+    26.3512,
+    -44.2856,
+    5.769
+   ]
+  },
+  {
+   "id": 217,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 4",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    25.3756,
+    -48.1936,
+    2.7532
+   ],
+   "max": [
+    25.5702,
+    -45.9889,
+    4.7552
+   ]
+  },
+  {
+   "id": 218,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 4",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    22.4432,
+    -45.2612,
+    2.7532
+   ],
+   "max": [
+    24.648,
+    -45.0666,
+    4.7552
+   ]
+  },
+  {
+   "id": 219,
+   "category": "goal",
+   "part": "276-9250-004",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    20.738,
+    -49.8988,
+    -0.0
+   ],
+   "max": [
+    26.3532,
+    -44.2836,
+    2.5197
+   ]
+  },
+  {
+   "id": 220,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 4",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    21.521,
+    -48.1936,
+    2.7532
+   ],
+   "max": [
+    21.7156,
+    -45.9889,
+    4.7552
+   ]
+  },
+  {
+   "id": 221,
+   "category": "goal_base",
+   "part": "276-4847-011",
+   "assembly": "276-9250-840_Neutral Goal 4",
+   "solid": true,
+   "dynamic": false,
+   "color": "#8a8e93",
+   "min": [
+    17.6401,
+    -52.9967,
+    -0.6673
+   ],
+   "max": [
+    29.4511,
+    -41.1857,
+    -0.4803
+   ]
+  },
+  {
+   "id": 222,
+   "category": "tape",
+   "part": "Tape- Corner Zone_Red Loader Zone",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -59.6162,
+    -71.2928,
+    0.0077
+   ],
+   "max": [
+    -58.8682,
+    -45.9484,
+    0.0277
+   ]
+  },
+  {
+   "id": 223,
+   "category": "tape",
+   "part": "Tape- Corner Zone_Red Loader Zone",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -71.2107,
+    -46.6964,
+    0.0077
+   ],
+   "max": [
+    -58.8682,
+    -45.9484,
+    0.0277
+   ]
+  },
+  {
+   "id": 224,
+   "category": "perimeter_foot",
+   "part": "276-8354-404",
+   "assembly": "",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    -72.6377,
+    -59.6382,
+    0.1546
+   ],
+   "max": [
+    -72.2046,
+    -57.8882,
+    1.1546
+   ]
+  },
+  {
+   "id": 225,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 1",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    45.9889,
+    -25.5702,
+    2.7532
+   ],
+   "max": [
+    48.1936,
+    -25.3756,
+    4.7552
+   ]
+  },
+  {
+   "id": 226,
+   "category": "goal",
+   "part": "276-9250-003_Master",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    44.2856,
+    -26.3512,
+    2.5197
+   ],
+   "max": [
+    49.8968,
+    -20.74,
+    5.769
+   ]
+  },
+  {
+   "id": 227,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 1",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    45.0666,
+    -24.648,
+    2.7532
+   ],
+   "max": [
+    45.2612,
+    -22.4432,
+    4.7552
+   ]
+  },
+  {
+   "id": 228,
+   "category": "goal_base",
+   "part": "276-4847-011",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": true,
+   "dynamic": false,
+   "color": "#8a8e93",
+   "min": [
+    41.1857,
+    -29.4511,
+    -0.6673
+   ],
+   "max": [
+    52.9967,
+    -17.6401,
+    -0.4803
+   ]
+  },
+  {
+   "id": 229,
+   "category": "goal",
+   "part": "276-9250-004",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d9d9d9",
+   "min": [
+    44.2836,
+    -26.3532,
+    -0.0
+   ],
+   "max": [
+    49.8988,
+    -20.738,
+    2.5197
+   ]
+  },
+  {
+   "id": 230,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 1",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    48.9212,
+    -24.648,
+    2.7532
+   ],
+   "max": [
+    49.1158,
+    -22.4432,
+    4.7552
+   ]
+  },
+  {
+   "id": 231,
+   "category": "apriltag",
+   "part": "276-9250-006_AprilTag 1",
+   "assembly": "276-9250-840_Neutral Goal 1",
+   "solid": false,
+   "dynamic": false,
+   "color": "#111111",
+   "min": [
+    45.9889,
+    -21.7156,
+    2.7532
+   ],
+   "max": [
+    48.1936,
+    -21.521,
+    4.7552
+   ]
+  },
+  {
+   "id": 232,
+   "category": "perimeter_foot",
+   "part": "276-8354-404",
+   "assembly": "",
+   "solid": true,
+   "dynamic": false,
+   "color": "#3a3c40",
+   "min": [
+    72.2046,
+    -59.6382,
+    10.4186
+   ],
+   "max": [
+    72.6377,
+    -57.8882,
+    11.4186
+   ]
+  },
+  {
+   "id": 233,
+   "category": "alliance_bar",
+   "part": "276-9250-023_GREY",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -12.9173,
+    -72.9934,
+    11.6263
+   ],
+   "max": [
+    12.9173,
+    -70.0805,
+    14.4808
+   ]
+  },
+  {
+   "id": 234,
+   "category": "alliance_bar",
+   "part": "276-9250-021",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    11.0,
+    -72.3031,
+    10.6686
+   ],
+   "max": [
+    13.1304,
+    -70.1062,
+    14.3549
+   ]
+  },
+  {
+   "id": 235,
+   "category": "alliance_bar",
+   "part": "276-9250-024",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -13.5945,
+    -73.0213,
+    11.5579
+   ],
+   "max": [
+    -11.4409,
+    -70.1076,
+    14.4536
+   ]
+  },
+  {
+   "id": 236,
+   "category": "alliance_bar",
+   "part": "276-9250-022",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -13.1304,
+    -72.3031,
+    10.6686
+   ],
+   "max": [
+    -11.0,
+    -70.1062,
+    14.3549
+   ]
+  },
+  {
+   "id": 237,
+   "category": "alliance_bar",
+   "part": "276-9250-024",
+   "assembly": "276-9250-120_Red Alliance Side",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    11.4409,
+    -73.0214,
+    11.558
+   ],
+   "max": [
+    13.5945,
+    -70.1077,
+    14.4537
+   ]
+  },
+  {
+   "id": 238,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -2.0062,
+    21.5394,
+    -0.0041
+   ],
+   "max": [
+    0.5289,
+    24.0745,
+    0.0159
+   ]
+  },
+  {
+   "id": 239,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -4.0124,
+    19.5332,
+    -0.0041
+   ],
+   "max": [
+    -1.4773,
+    22.0683,
+    0.0159
+   ]
+  },
+  {
+   "id": 240,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -6.0186,
+    17.527,
+    -0.0041
+   ],
+   "max": [
+    -3.4835,
+    20.0621,
+    0.0159
+   ]
+  },
+  {
+   "id": 241,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -8.0248,
+    15.5208,
+    -0.0041
+   ],
+   "max": [
+    -5.4897,
+    18.0559,
+    0.0159
+   ]
+  },
+  {
+   "id": 242,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -10.0311,
+    13.5145,
+    -0.0041
+   ],
+   "max": [
+    -7.4959,
+    16.0497,
+    0.0159
+   ]
+  },
+  {
+   "id": 243,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -12.0373,
+    11.5083,
+    -0.0041
+   ],
+   "max": [
+    -9.5021,
+    14.0435,
+    0.0159
+   ]
+  },
+  {
+   "id": 244,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -14.0435,
+    9.5021,
+    -0.0041
+   ],
+   "max": [
+    -11.5083,
+    12.0373,
+    0.0159
+   ]
+  },
+  {
+   "id": 245,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -16.0497,
+    7.4959,
+    -0.0041
+   ],
+   "max": [
+    -13.5145,
+    10.0311,
+    0.0159
+   ]
+  },
+  {
+   "id": 246,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -18.0559,
+    5.4897,
+    -0.0041
+   ],
+   "max": [
+    -15.5208,
+    8.0248,
+    0.0159
+   ]
+  },
+  {
+   "id": 247,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -20.0621,
+    3.4835,
+    -0.0041
+   ],
+   "max": [
+    -17.527,
+    6.0186,
+    0.0159
+   ]
+  },
+  {
+   "id": 248,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -22.0683,
+    1.4773,
+    -0.0041
+   ],
+   "max": [
+    -19.5332,
+    4.0124,
+    0.0159
+   ]
+  },
+  {
+   "id": 249,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -24.0745,
+    -0.5289,
+    -0.0041
+   ],
+   "max": [
+    -21.5394,
+    2.0062,
+    0.0159
+   ]
+  },
+  {
+   "id": 250,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -24.0745,
+    -2.0062,
+    -0.0041
+   ],
+   "max": [
+    -21.5394,
+    0.5289,
+    0.0159
+   ]
+  },
+  {
+   "id": 251,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -22.0683,
+    -4.0124,
+    -0.0041
+   ],
+   "max": [
+    -19.5332,
+    -1.4773,
+    0.0159
+   ]
+  },
+  {
+   "id": 252,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -20.0621,
+    -6.0186,
+    -0.0041
+   ],
+   "max": [
+    -17.527,
+    -3.4835,
+    0.0159
+   ]
+  },
+  {
+   "id": 253,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -18.0559,
+    -8.0248,
+    -0.0041
+   ],
+   "max": [
+    -15.5208,
+    -5.4897,
+    0.0159
+   ]
+  },
+  {
+   "id": 254,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -16.0497,
+    -10.0311,
+    -0.0041
+   ],
+   "max": [
+    -13.5145,
+    -7.4959,
+    0.0159
+   ]
+  },
+  {
+   "id": 255,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -14.0435,
+    -12.0373,
+    -0.0041
+   ],
+   "max": [
+    -11.5083,
+    -9.5021,
+    0.0159
+   ]
+  },
+  {
+   "id": 256,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -12.0373,
+    -14.0435,
+    -0.0041
+   ],
+   "max": [
+    -9.5021,
+    -11.5083,
+    0.0159
+   ]
+  },
+  {
+   "id": 257,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -10.0311,
+    -16.0497,
+    -0.0041
+   ],
+   "max": [
+    -7.4959,
+    -13.5145,
+    0.0159
+   ]
+  },
+  {
+   "id": 258,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -8.0248,
+    -18.0559,
+    -0.0041
+   ],
+   "max": [
+    -5.4897,
+    -15.5208,
+    0.0159
+   ]
+  },
+  {
+   "id": 259,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -6.0186,
+    -20.0621,
+    -0.0041
+   ],
+   "max": [
+    -3.4835,
+    -17.527,
+    0.0159
+   ]
+  },
+  {
+   "id": 260,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -4.0124,
+    -22.0683,
+    -0.0041
+   ],
+   "max": [
+    -1.4773,
+    -19.5332,
+    0.0159
+   ]
+  },
+  {
+   "id": 261,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -2.0062,
+    -24.0745,
+    -0.0041
+   ],
+   "max": [
+    0.5289,
+    -21.5394,
+    0.0159
+   ]
+  },
+  {
+   "id": 262,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -14.3589,
+    -14.3589,
+    -0.0041
+   ],
+   "max": [
+    -11.7728,
+    -11.7728,
+    0.0159
+   ]
+  },
+  {
+   "id": 263,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -16.4161,
+    -16.4161,
+    -0.0041
+   ],
+   "max": [
+    -13.83,
+    -13.83,
+    0.0159
+   ]
+  },
+  {
+   "id": 264,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -18.4733,
+    -18.4733,
+    -0.0041
+   ],
+   "max": [
+    -15.8872,
+    -15.8872,
+    0.0159
+   ]
+  },
+  {
+   "id": 265,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -20.5305,
+    -20.5305,
+    -0.0041
+   ],
+   "max": [
+    -17.9443,
+    -17.9443,
+    0.0159
+   ]
+  },
+  {
+   "id": 266,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -22.5876,
+    -22.5876,
+    -0.0041
+   ],
+   "max": [
+    -20.0015,
+    -20.0015,
+    0.0159
+   ]
+  },
+  {
+   "id": 267,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -24.6448,
+    -24.6448,
+    -0.0041
+   ],
+   "max": [
+    -22.0587,
+    -22.0587,
+    0.0159
+   ]
+  },
+  {
+   "id": 268,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -26.702,
+    -26.702,
+    -0.0041
+   ],
+   "max": [
+    -24.1159,
+    -24.1159,
+    0.0159
+   ]
+  },
+  {
+   "id": 269,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -28.7592,
+    -28.7592,
+    -0.0041
+   ],
+   "max": [
+    -26.1731,
+    -26.1731,
+    0.0159
+   ]
+  },
+  {
+   "id": 270,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -30.8164,
+    -30.8164,
+    -0.0041
+   ],
+   "max": [
+    -28.2302,
+    -28.2302,
+    0.0159
+   ]
+  },
+  {
+   "id": 271,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -32.8735,
+    -32.8735,
+    -0.0041
+   ],
+   "max": [
+    -30.2874,
+    -30.2874,
+    0.0159
+   ]
+  },
+  {
+   "id": 272,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -34.9307,
+    -34.9307,
+    -0.0041
+   ],
+   "max": [
+    -32.3446,
+    -32.3446,
+    0.0159
+   ]
+  },
+  {
+   "id": 273,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -36.9879,
+    -36.9879,
+    -0.0041
+   ],
+   "max": [
+    -34.4018,
+    -34.4018,
+    0.0159
+   ]
+  },
+  {
+   "id": 274,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -39.0451,
+    -39.0451,
+    -0.0041
+   ],
+   "max": [
+    -36.459,
+    -36.459,
+    0.0159
+   ]
+  },
+  {
+   "id": 275,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -41.1023,
+    -41.1023,
+    -0.0041
+   ],
+   "max": [
+    -38.5162,
+    -38.5162,
+    0.0159
+   ]
+  },
+  {
+   "id": 276,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -43.1595,
+    -43.1595,
+    -0.0041
+   ],
+   "max": [
+    -40.5733,
+    -40.5733,
+    0.0159
+   ]
+  },
+  {
+   "id": 277,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -45.2166,
+    -45.2166,
+    -0.0041
+   ],
+   "max": [
+    -42.6305,
+    -42.6305,
+    0.0159
+   ]
+  },
+  {
+   "id": 278,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -47.2738,
+    -47.2738,
+    -0.0041
+   ],
+   "max": [
+    -44.6877,
+    -44.6877,
+    0.0159
+   ]
+  },
+  {
+   "id": 279,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -49.331,
+    -49.331,
+    -0.0041
+   ],
+   "max": [
+    -46.7449,
+    -46.7449,
+    0.0159
+   ]
+  },
+  {
+   "id": 280,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -51.3882,
+    -51.3882,
+    -0.0041
+   ],
+   "max": [
+    -48.8021,
+    -48.8021,
+    0.0159
+   ]
+  },
+  {
+   "id": 281,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -53.4454,
+    -53.4454,
+    -0.0041
+   ],
+   "max": [
+    -50.8592,
+    -50.8592,
+    0.0159
+   ]
+  },
+  {
+   "id": 282,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -55.5025,
+    -55.5025,
+    -0.0041
+   ],
+   "max": [
+    -52.9164,
+    -52.9164,
+    0.0159
+   ]
+  },
+  {
+   "id": 283,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -57.5597,
+    -57.5597,
+    -0.0041
+   ],
+   "max": [
+    -54.9736,
+    -54.9736,
+    0.0159
+   ]
+  },
+  {
+   "id": 284,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -59.6169,
+    -59.6169,
+    -0.0041
+   ],
+   "max": [
+    -57.0308,
+    -57.0308,
+    0.0159
+   ]
+  },
+  {
+   "id": 285,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -0.5289,
+    -24.0745,
+    -0.0041
+   ],
+   "max": [
+    2.0062,
+    -21.5394,
+    0.0159
+   ]
+  },
+  {
+   "id": 286,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    1.4773,
+    -22.0683,
+    -0.0041
+   ],
+   "max": [
+    4.0124,
+    -19.5332,
+    0.0159
+   ]
+  },
+  {
+   "id": 287,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    3.4835,
+    -20.0621,
+    -0.0041
+   ],
+   "max": [
+    6.0186,
+    -17.527,
+    0.0159
+   ]
+  },
+  {
+   "id": 288,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    5.4897,
+    -18.0559,
+    -0.0041
+   ],
+   "max": [
+    8.0248,
+    -15.5208,
+    0.0159
+   ]
+  },
+  {
+   "id": 289,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    7.4959,
+    -16.0497,
+    -0.0041
+   ],
+   "max": [
+    10.0311,
+    -13.5145,
+    0.0159
+   ]
+  },
+  {
+   "id": 290,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    9.5021,
+    -14.0435,
+    -0.0041
+   ],
+   "max": [
+    12.0373,
+    -11.5083,
+    0.0159
+   ]
+  },
+  {
+   "id": 291,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    11.5083,
+    -12.0373,
+    -0.0041
+   ],
+   "max": [
+    14.0435,
+    -9.5021,
+    0.0159
+   ]
+  },
+  {
+   "id": 292,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    13.5145,
+    -10.0311,
+    -0.0041
+   ],
+   "max": [
+    16.0497,
+    -7.4959,
+    0.0159
+   ]
+  },
+  {
+   "id": 293,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    15.5208,
+    -8.0248,
+    -0.0041
+   ],
+   "max": [
+    18.0559,
+    -5.4897,
+    0.0159
+   ]
+  },
+  {
+   "id": 294,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    17.527,
+    -6.0186,
+    -0.0041
+   ],
+   "max": [
+    20.0621,
+    -3.4835,
+    0.0159
+   ]
+  },
+  {
+   "id": 295,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    19.5332,
+    -4.0124,
+    -0.0041
+   ],
+   "max": [
+    22.0683,
+    -1.4773,
+    0.0159
+   ]
+  },
+  {
+   "id": 296,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    21.5394,
+    -2.0062,
+    -0.0041
+   ],
+   "max": [
+    24.0745,
+    0.5289,
+    0.0159
+   ]
+  },
+  {
+   "id": 297,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    11.1534,
+    -15.0013,
+    -0.0041
+   ],
+   "max": [
+    13.7624,
+    -12.3922,
+    0.0159
+   ]
+  },
+  {
+   "id": 298,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    13.2335,
+    -17.0814,
+    -0.0041
+   ],
+   "max": [
+    15.8425,
+    -14.4723,
+    0.0159
+   ]
+  },
+  {
+   "id": 299,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    15.3136,
+    -19.1615,
+    -0.0041
+   ],
+   "max": [
+    17.9226,
+    -16.5524,
+    0.0159
+   ]
+  },
+  {
+   "id": 300,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    17.3937,
+    -21.2416,
+    -0.0041
+   ],
+   "max": [
+    20.0027,
+    -18.6325,
+    0.0159
+   ]
+  },
+  {
+   "id": 301,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    19.4738,
+    -23.3217,
+    -0.0041
+   ],
+   "max": [
+    22.0828,
+    -20.7126,
+    0.0159
+   ]
+  },
+  {
+   "id": 302,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    21.5539,
+    -25.4018,
+    -0.0041
+   ],
+   "max": [
+    24.1629,
+    -22.7927,
+    0.0159
+   ]
+  },
+  {
+   "id": 303,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    23.634,
+    -27.4819,
+    -0.0041
+   ],
+   "max": [
+    26.243,
+    -24.8728,
+    0.0159
+   ]
+  },
+  {
+   "id": 304,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    25.7141,
+    -29.562,
+    -0.0041
+   ],
+   "max": [
+    28.3231,
+    -26.9529,
+    0.0159
+   ]
+  },
+  {
+   "id": 305,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    27.7942,
+    -31.6421,
+    -0.0041
+   ],
+   "max": [
+    30.4032,
+    -29.033,
+    0.0159
+   ]
+  },
+  {
+   "id": 306,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    29.8743,
+    -33.7222,
+    -0.0041
+   ],
+   "max": [
+    32.4833,
+    -31.1131,
+    0.0159
+   ]
+  },
+  {
+   "id": 307,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    31.9544,
+    -35.8023,
+    -0.0041
+   ],
+   "max": [
+    34.5634,
+    -33.1932,
+    0.0159
+   ]
+  },
+  {
+   "id": 308,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    34.0345,
+    -37.8824,
+    -0.0041
+   ],
+   "max": [
+    36.6435,
+    -35.2733,
+    0.0159
+   ]
+  },
+  {
+   "id": 309,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    36.1146,
+    -39.9625,
+    -0.0041
+   ],
+   "max": [
+    38.7236,
+    -37.3534,
+    0.0159
+   ]
+  },
+  {
+   "id": 310,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    38.1947,
+    -42.0426,
+    -0.0041
+   ],
+   "max": [
+    40.8037,
+    -39.4335,
+    0.0159
+   ]
+  },
+  {
+   "id": 311,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    40.2748,
+    -44.1227,
+    -0.0041
+   ],
+   "max": [
+    42.8838,
+    -41.5136,
+    0.0159
+   ]
+  },
+  {
+   "id": 312,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    42.3549,
+    -46.2028,
+    -0.0041
+   ],
+   "max": [
+    44.9639,
+    -43.5937,
+    0.0159
+   ]
+  },
+  {
+   "id": 313,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    44.435,
+    -48.2829,
+    -0.0041
+   ],
+   "max": [
+    47.044,
+    -45.6738,
+    0.0159
+   ]
+  },
+  {
+   "id": 314,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    46.5151,
+    -50.363,
+    -0.0041
+   ],
+   "max": [
+    49.1241,
+    -47.7539,
+    0.0159
+   ]
+  },
+  {
+   "id": 315,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    48.5952,
+    -52.4431,
+    -0.0041
+   ],
+   "max": [
+    51.2042,
+    -49.834,
+    0.0159
+   ]
+  },
+  {
+   "id": 316,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    50.6753,
+    -54.5232,
+    -0.0041
+   ],
+   "max": [
+    53.2843,
+    -51.9141,
+    0.0159
+   ]
+  },
+  {
+   "id": 317,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    52.7554,
+    -56.6033,
+    -0.0041
+   ],
+   "max": [
+    55.3644,
+    -53.9942,
+    0.0159
+   ]
+  },
+  {
+   "id": 318,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    54.8355,
+    -58.6834,
+    -0.0041
+   ],
+   "max": [
+    57.4445,
+    -56.0743,
+    0.0159
+   ]
+  },
+  {
+   "id": 319,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    56.9156,
+    -60.7635,
+    -0.0041
+   ],
+   "max": [
+    59.5246,
+    -58.1544,
+    0.0159
+   ]
+  },
+  {
+   "id": 320,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    12.3922,
+    -13.7086,
+    -0.0041
+   ],
+   "max": [
+    14.9474,
+    -11.1534,
+    0.0159
+   ]
+  },
+  {
+   "id": 321,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    14.4185,
+    -15.7348,
+    -0.0041
+   ],
+   "max": [
+    16.9736,
+    -13.1796,
+    0.0159
+   ]
+  },
+  {
+   "id": 322,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    16.4447,
+    -17.761,
+    -0.0041
+   ],
+   "max": [
+    18.9999,
+    -15.2059,
+    0.0159
+   ]
+  },
+  {
+   "id": 323,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    18.4709,
+    -19.7873,
+    -0.0041
+   ],
+   "max": [
+    21.0261,
+    -17.2321,
+    0.0159
+   ]
+  },
+  {
+   "id": 324,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    20.4972,
+    -21.8135,
+    -0.0041
+   ],
+   "max": [
+    23.0524,
+    -19.2583,
+    0.0159
+   ]
+  },
+  {
+   "id": 325,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    22.5234,
+    -23.8398,
+    -0.0041
+   ],
+   "max": [
+    25.0786,
+    -21.2846,
+    0.0159
+   ]
+  },
+  {
+   "id": 326,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    24.5497,
+    -25.866,
+    -0.0041
+   ],
+   "max": [
+    27.1048,
+    -23.3108,
+    0.0159
+   ]
+  },
+  {
+   "id": 327,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    26.5759,
+    -27.8922,
+    -0.0041
+   ],
+   "max": [
+    29.1311,
+    -25.3371,
+    0.0159
+   ]
+  },
+  {
+   "id": 328,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    28.6021,
+    -29.9185,
+    -0.0041
+   ],
+   "max": [
+    31.1573,
+    -27.3633,
+    0.0159
+   ]
+  },
+  {
+   "id": 329,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    30.6284,
+    -31.9447,
+    -0.0041
+   ],
+   "max": [
+    33.1835,
+    -29.3895,
+    0.0159
+   ]
+  },
+  {
+   "id": 330,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    32.6546,
+    -33.971,
+    -0.0041
+   ],
+   "max": [
+    35.2098,
+    -31.4158,
+    0.0159
+   ]
+  },
+  {
+   "id": 331,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    34.6808,
+    -35.9972,
+    -0.0041
+   ],
+   "max": [
+    37.236,
+    -33.442,
+    0.0159
+   ]
+  },
+  {
+   "id": 332,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    36.7071,
+    -38.0234,
+    -0.0041
+   ],
+   "max": [
+    39.2623,
+    -35.4683,
+    0.0159
+   ]
+  },
+  {
+   "id": 333,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    38.7333,
+    -40.0497,
+    -0.0041
+   ],
+   "max": [
+    41.2885,
+    -37.4945,
+    0.0159
+   ]
+  },
+  {
+   "id": 334,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    40.7596,
+    -42.0759,
+    -0.0041
+   ],
+   "max": [
+    43.3147,
+    -39.5207,
+    0.0159
+   ]
+  },
+  {
+   "id": 335,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    42.7858,
+    -44.1021,
+    -0.0041
+   ],
+   "max": [
+    45.341,
+    -41.547,
+    0.0159
+   ]
+  },
+  {
+   "id": 336,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    44.812,
+    -46.1284,
+    -0.0041
+   ],
+   "max": [
+    47.3672,
+    -43.5732,
+    0.0159
+   ]
+  },
+  {
+   "id": 337,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    46.8383,
+    -48.1546,
+    -0.0041
+   ],
+   "max": [
+    49.3935,
+    -45.5994,
+    0.0159
+   ]
+  },
+  {
+   "id": 338,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    48.8645,
+    -50.1809,
+    -0.0041
+   ],
+   "max": [
+    51.4197,
+    -47.6257,
+    0.0159
+   ]
+  },
+  {
+   "id": 339,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    50.8908,
+    -52.2071,
+    -0.0041
+   ],
+   "max": [
+    53.4459,
+    -49.6519,
+    0.0159
+   ]
+  },
+  {
+   "id": 340,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    52.917,
+    -54.2333,
+    -0.0041
+   ],
+   "max": [
+    55.4722,
+    -51.6782,
+    0.0159
+   ]
+  },
+  {
+   "id": 341,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    54.9432,
+    -56.2596,
+    -0.0041
+   ],
+   "max": [
+    57.4984,
+    -53.7044,
+    0.0159
+   ]
+  },
+  {
+   "id": 342,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    56.9695,
+    -58.2858,
+    -0.0041
+   ],
+   "max": [
+    59.5246,
+    -55.7306,
+    0.0159
+   ]
+  },
+  {
+   "id": 343,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    21.5394,
+    -0.5289,
+    -0.0041
+   ],
+   "max": [
+    24.0745,
+    2.0062,
+    0.0159
+   ]
+  },
+  {
+   "id": 344,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    19.5332,
+    1.4773,
+    -0.0041
+   ],
+   "max": [
+    22.0683,
+    4.0124,
+    0.0159
+   ]
+  },
+  {
+   "id": 345,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    17.527,
+    3.4835,
+    -0.0041
+   ],
+   "max": [
+    20.0621,
+    6.0186,
+    0.0159
+   ]
+  },
+  {
+   "id": 346,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    15.5208,
+    5.4897,
+    -0.0041
+   ],
+   "max": [
+    18.0559,
+    8.0248,
+    0.0159
+   ]
+  },
+  {
+   "id": 347,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    13.5145,
+    7.4959,
+    -0.0041
+   ],
+   "max": [
+    16.0497,
+    10.0311,
+    0.0159
+   ]
+  },
+  {
+   "id": 348,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    11.5083,
+    9.5021,
+    -0.0041
+   ],
+   "max": [
+    14.0435,
+    12.0373,
+    0.0159
+   ]
+  },
+  {
+   "id": 349,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    9.5021,
+    11.5083,
+    -0.0041
+   ],
+   "max": [
+    12.0373,
+    14.0435,
+    0.0159
+   ]
+  },
+  {
+   "id": 350,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    7.4959,
+    13.5145,
+    -0.0041
+   ],
+   "max": [
+    10.0311,
+    16.0497,
+    0.0159
+   ]
+  },
+  {
+   "id": 351,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    5.4897,
+    15.5208,
+    -0.0041
+   ],
+   "max": [
+    8.0248,
+    18.0559,
+    0.0159
+   ]
+  },
+  {
+   "id": 352,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    3.4835,
+    17.527,
+    -0.0041
+   ],
+   "max": [
+    6.0186,
+    20.0621,
+    0.0159
+   ]
+  },
+  {
+   "id": 353,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    1.4773,
+    19.5332,
+    -0.0041
+   ],
+   "max": [
+    4.0124,
+    22.0683,
+    0.0159
+   ]
+  },
+  {
+   "id": 354,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -0.5289,
+    21.5394,
+    -0.0041
+   ],
+   "max": [
+    2.0062,
+    24.0745,
+    0.0159
+   ]
+  },
+  {
+   "id": 355,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    11.7728,
+    11.7728,
+    -0.0041
+   ],
+   "max": [
+    14.3589,
+    14.3589,
+    0.0159
+   ]
+  },
+  {
+   "id": 356,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    13.83,
+    13.83,
+    -0.0041
+   ],
+   "max": [
+    16.4161,
+    16.4161,
+    0.0159
+   ]
+  },
+  {
+   "id": 357,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    15.8872,
+    15.8872,
+    -0.0041
+   ],
+   "max": [
+    18.4733,
+    18.4733,
+    0.0159
+   ]
+  },
+  {
+   "id": 358,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    17.9443,
+    17.9443,
+    -0.0041
+   ],
+   "max": [
+    20.5305,
+    20.5305,
+    0.0159
+   ]
+  },
+  {
+   "id": 359,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    20.0015,
+    20.0015,
+    -0.0041
+   ],
+   "max": [
+    22.5876,
+    22.5876,
+    0.0159
+   ]
+  },
+  {
+   "id": 360,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    22.0587,
+    22.0587,
+    -0.0041
+   ],
+   "max": [
+    24.6448,
+    24.6448,
+    0.0159
+   ]
+  },
+  {
+   "id": 361,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    24.1159,
+    24.1159,
+    -0.0041
+   ],
+   "max": [
+    26.702,
+    26.702,
+    0.0159
+   ]
+  },
+  {
+   "id": 362,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    26.1731,
+    26.1731,
+    -0.0041
+   ],
+   "max": [
+    28.7592,
+    28.7592,
+    0.0159
+   ]
+  },
+  {
+   "id": 363,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    28.2302,
+    28.2302,
+    -0.0041
+   ],
+   "max": [
+    30.8164,
+    30.8164,
+    0.0159
+   ]
+  },
+  {
+   "id": 364,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    30.2874,
+    30.2874,
+    -0.0041
+   ],
+   "max": [
+    32.8735,
+    32.8735,
+    0.0159
+   ]
+  },
+  {
+   "id": 365,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    32.3446,
+    32.3446,
+    -0.0041
+   ],
+   "max": [
+    34.9307,
+    34.9307,
+    0.0159
+   ]
+  },
+  {
+   "id": 366,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    34.4018,
+    34.4018,
+    -0.0041
+   ],
+   "max": [
+    36.9879,
+    36.9879,
+    0.0159
+   ]
+  },
+  {
+   "id": 367,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    36.459,
+    36.459,
+    -0.0041
+   ],
+   "max": [
+    39.0451,
+    39.0451,
+    0.0159
+   ]
+  },
+  {
+   "id": 368,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    38.5162,
+    38.5162,
+    -0.0041
+   ],
+   "max": [
+    41.1023,
+    41.1023,
+    0.0159
+   ]
+  },
+  {
+   "id": 369,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    40.5733,
+    40.5733,
+    -0.0041
+   ],
+   "max": [
+    43.1595,
+    43.1595,
+    0.0159
+   ]
+  },
+  {
+   "id": 370,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    42.6305,
+    42.6305,
+    -0.0041
+   ],
+   "max": [
+    45.2166,
+    45.2166,
+    0.0159
+   ]
+  },
+  {
+   "id": 371,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    44.6877,
+    44.6877,
+    -0.0041
+   ],
+   "max": [
+    47.2738,
+    47.2738,
+    0.0159
+   ]
+  },
+  {
+   "id": 372,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    46.7449,
+    46.7449,
+    -0.0041
+   ],
+   "max": [
+    49.331,
+    49.331,
+    0.0159
+   ]
+  },
+  {
+   "id": 373,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    48.8021,
+    48.8021,
+    -0.0041
+   ],
+   "max": [
+    51.3882,
+    51.3882,
+    0.0159
+   ]
+  },
+  {
+   "id": 374,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    50.8592,
+    50.8592,
+    -0.0041
+   ],
+   "max": [
+    53.4454,
+    53.4454,
+    0.0159
+   ]
+  },
+  {
+   "id": 375,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    52.9164,
+    52.9164,
+    -0.0041
+   ],
+   "max": [
+    55.5025,
+    55.5025,
+    0.0159
+   ]
+  },
+  {
+   "id": 376,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    54.9736,
+    54.9736,
+    -0.0041
+   ],
+   "max": [
+    57.5597,
+    57.5597,
+    0.0159
+   ]
+  },
+  {
+   "id": 377,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    57.0308,
+    57.0308,
+    -0.0041
+   ],
+   "max": [
+    59.6169,
+    59.6169,
+    0.0159
+   ]
+  },
+  {
+   "id": 378,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -13.7624,
+    12.3922,
+    -0.0041
+   ],
+   "max": [
+    -11.1534,
+    15.0013,
+    0.0159
+   ]
+  },
+  {
+   "id": 379,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -15.8425,
+    14.4723,
+    -0.0041
+   ],
+   "max": [
+    -13.2335,
+    17.0814,
+    0.0159
+   ]
+  },
+  {
+   "id": 380,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -17.9226,
+    16.5524,
+    -0.0041
+   ],
+   "max": [
+    -15.3136,
+    19.1615,
+    0.0159
+   ]
+  },
+  {
+   "id": 381,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -20.0027,
+    18.6325,
+    -0.0041
+   ],
+   "max": [
+    -17.3937,
+    21.2416,
+    0.0159
+   ]
+  },
+  {
+   "id": 382,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -22.0828,
+    20.7126,
+    -0.0041
+   ],
+   "max": [
+    -19.4738,
+    23.3217,
+    0.0159
+   ]
+  },
+  {
+   "id": 383,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -24.1629,
+    22.7927,
+    -0.0041
+   ],
+   "max": [
+    -21.5539,
+    25.4018,
+    0.0159
+   ]
+  },
+  {
+   "id": 384,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -26.243,
+    24.8728,
+    -0.0041
+   ],
+   "max": [
+    -23.634,
+    27.4819,
+    0.0159
+   ]
+  },
+  {
+   "id": 385,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -28.3231,
+    26.9529,
+    -0.0041
+   ],
+   "max": [
+    -25.7141,
+    29.562,
+    0.0159
+   ]
+  },
+  {
+   "id": 386,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -30.4032,
+    29.033,
+    -0.0041
+   ],
+   "max": [
+    -27.7942,
+    31.6421,
+    0.0159
+   ]
+  },
+  {
+   "id": 387,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -32.4833,
+    31.1131,
+    -0.0041
+   ],
+   "max": [
+    -29.8743,
+    33.7222,
+    0.0159
+   ]
+  },
+  {
+   "id": 388,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -34.5634,
+    33.1932,
+    -0.0041
+   ],
+   "max": [
+    -31.9544,
+    35.8023,
+    0.0159
+   ]
+  },
+  {
+   "id": 389,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -36.6435,
+    35.2733,
+    -0.0041
+   ],
+   "max": [
+    -34.0345,
+    37.8824,
+    0.0159
+   ]
+  },
+  {
+   "id": 390,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -38.7236,
+    37.3534,
+    -0.0041
+   ],
+   "max": [
+    -36.1146,
+    39.9625,
+    0.0159
+   ]
+  },
+  {
+   "id": 391,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -40.8037,
+    39.4335,
+    -0.0041
+   ],
+   "max": [
+    -38.1947,
+    42.0426,
+    0.0159
+   ]
+  },
+  {
+   "id": 392,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -42.8838,
+    41.5136,
+    -0.0041
+   ],
+   "max": [
+    -40.2748,
+    44.1227,
+    0.0159
+   ]
+  },
+  {
+   "id": 393,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -44.9639,
+    43.5937,
+    -0.0041
+   ],
+   "max": [
+    -42.3549,
+    46.2028,
+    0.0159
+   ]
+  },
+  {
+   "id": 394,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -47.044,
+    45.6738,
+    -0.0041
+   ],
+   "max": [
+    -44.435,
+    48.2829,
+    0.0159
+   ]
+  },
+  {
+   "id": 395,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -49.1241,
+    47.7539,
+    -0.0041
+   ],
+   "max": [
+    -46.5151,
+    50.363,
+    0.0159
+   ]
+  },
+  {
+   "id": 396,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -51.2042,
+    49.834,
+    -0.0041
+   ],
+   "max": [
+    -48.5952,
+    52.4431,
+    0.0159
+   ]
+  },
+  {
+   "id": 397,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -53.2843,
+    51.9141,
+    -0.0041
+   ],
+   "max": [
+    -50.6753,
+    54.5232,
+    0.0159
+   ]
+  },
+  {
+   "id": 398,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -55.3644,
+    53.9942,
+    -0.0041
+   ],
+   "max": [
+    -52.7554,
+    56.6033,
+    0.0159
+   ]
+  },
+  {
+   "id": 399,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -57.4445,
+    56.0743,
+    -0.0041
+   ],
+   "max": [
+    -54.8355,
+    58.6834,
+    0.0159
+   ]
+  },
+  {
+   "id": 400,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -59.5246,
+    58.1544,
+    -0.0041
+   ],
+   "max": [
+    -56.9156,
+    60.7635,
+    0.0159
+   ]
+  },
+  {
+   "id": 401,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -14.9474,
+    11.1534,
+    -0.0041
+   ],
+   "max": [
+    -12.3922,
+    13.7086,
+    0.0159
+   ]
+  },
+  {
+   "id": 402,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -16.9736,
+    13.1796,
+    -0.0041
+   ],
+   "max": [
+    -14.4185,
+    15.7348,
+    0.0159
+   ]
+  },
+  {
+   "id": 403,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -18.9999,
+    15.2059,
+    -0.0041
+   ],
+   "max": [
+    -16.4447,
+    17.761,
+    0.0159
+   ]
+  },
+  {
+   "id": 404,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -21.0261,
+    17.2321,
+    -0.0041
+   ],
+   "max": [
+    -18.4709,
+    19.7873,
+    0.0159
+   ]
+  },
+  {
+   "id": 405,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -23.0524,
+    19.2583,
+    -0.0041
+   ],
+   "max": [
+    -20.4972,
+    21.8135,
+    0.0159
+   ]
+  },
+  {
+   "id": 406,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -25.0786,
+    21.2846,
+    -0.0041
+   ],
+   "max": [
+    -22.5234,
+    23.8398,
+    0.0159
+   ]
+  },
+  {
+   "id": 407,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -27.1048,
+    23.3108,
+    -0.0041
+   ],
+   "max": [
+    -24.5497,
+    25.866,
+    0.0159
+   ]
+  },
+  {
+   "id": 408,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -29.1311,
+    25.3371,
+    -0.0041
+   ],
+   "max": [
+    -26.5759,
+    27.8922,
+    0.0159
+   ]
+  },
+  {
+   "id": 409,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -31.1573,
+    27.3633,
+    -0.0041
+   ],
+   "max": [
+    -28.6021,
+    29.9185,
+    0.0159
+   ]
+  },
+  {
+   "id": 410,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -33.1835,
+    29.3895,
+    -0.0041
+   ],
+   "max": [
+    -30.6284,
+    31.9447,
+    0.0159
+   ]
+  },
+  {
+   "id": 411,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -35.2098,
+    31.4158,
+    -0.0041
+   ],
+   "max": [
+    -32.6546,
+    33.971,
+    0.0159
+   ]
+  },
+  {
+   "id": 412,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -37.236,
+    33.442,
+    -0.0041
+   ],
+   "max": [
+    -34.6808,
+    35.9972,
+    0.0159
+   ]
+  },
+  {
+   "id": 413,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -39.2623,
+    35.4683,
+    -0.0041
+   ],
+   "max": [
+    -36.7071,
+    38.0234,
+    0.0159
+   ]
+  },
+  {
+   "id": 414,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -41.2885,
+    37.4945,
+    -0.0041
+   ],
+   "max": [
+    -38.7333,
+    40.0497,
+    0.0159
+   ]
+  },
+  {
+   "id": 415,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -43.3147,
+    39.5207,
+    -0.0041
+   ],
+   "max": [
+    -40.7596,
+    42.0759,
+    0.0159
+   ]
+  },
+  {
+   "id": 416,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -45.341,
+    41.547,
+    -0.0041
+   ],
+   "max": [
+    -42.7858,
+    44.1021,
+    0.0159
+   ]
+  },
+  {
+   "id": 417,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -47.3672,
+    43.5732,
+    -0.0041
+   ],
+   "max": [
+    -44.812,
+    46.1284,
+    0.0159
+   ]
+  },
+  {
+   "id": 418,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -49.3935,
+    45.5994,
+    -0.0041
+   ],
+   "max": [
+    -46.8383,
+    48.1546,
+    0.0159
+   ]
+  },
+  {
+   "id": 419,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -51.4197,
+    47.6257,
+    -0.0041
+   ],
+   "max": [
+    -48.8645,
+    50.1809,
+    0.0159
+   ]
+  },
+  {
+   "id": 420,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -53.4459,
+    49.6519,
+    -0.0041
+   ],
+   "max": [
+    -50.8908,
+    52.2071,
+    0.0159
+   ]
+  },
+  {
+   "id": 421,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -55.4722,
+    51.6782,
+    -0.0041
+   ],
+   "max": [
+    -52.917,
+    54.2333,
+    0.0159
+   ]
+  },
+  {
+   "id": 422,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -57.4984,
+    53.7044,
+    -0.0041
+   ],
+   "max": [
+    -54.9432,
+    56.2596,
+    0.0159
+   ]
+  },
+  {
+   "id": 423,
+   "category": "tape",
+   "part": "Tape- Toggle Zones_Diamond Center- Divided Zones",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#e8e8e8",
+   "min": [
+    -59.5246,
+    55.7306,
+    -0.0041
+   ],
+   "max": [
+    -56.9695,
+    58.2858,
+    0.0159
+   ]
+  },
+  {
+   "id": 424,
+   "category": "alliance_station",
+   "part": "Wall Alliance Stations_PMS 299c - Bright Blue",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    82.6772,
+    56.0,
+    -0.6299
+   ],
+   "max": [
+    118.6772,
+    58.0,
+    -0.5906
+   ]
+  },
+  {
+   "id": 425,
+   "category": "alliance_station",
+   "part": "Wall Alliance Stations_PMS 299c - Bright Blue",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    82.6772,
+    -58.0,
+    -0.6299
+   ],
+   "max": [
+    84.6772,
+    58.0,
+    -0.5906
+   ]
+  },
+  {
+   "id": 426,
+   "category": "alliance_station",
+   "part": "Wall Alliance Stations_PMS 299c - Bright Blue",
+   "assembly": "",
+   "solid": false,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    82.6772,
+    -58.0,
+    -0.6299
+   ],
+   "max": [
+    118.6772,
+    -56.0,
+    -0.5906
+   ]
+  },
+  {
+   "id": 427,
+   "category": "loader",
+   "part": "276-9250-031_Blue Loader",
+   "assembly": "276-9250-830_276-9250-832",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    66.4645,
+    56.3347,
+    3.248
+   ],
+   "max": [
+    71.8572,
+    61.1917,
+    14.3701
+   ]
+  },
+  {
+   "id": 428,
+   "category": "loader",
+   "part": "276-9250-031_Red Loader",
+   "assembly": "276-9250-830_276-9250-831",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -71.8572,
+    -61.1917,
+    3.5573
+   ],
+   "max": [
+    -66.4645,
+    -56.3347,
+    14.6793
+   ]
+  },
+  {
+   "id": 429,
+   "category": "loader",
+   "part": "276-9250-031_Blue Loader",
+   "assembly": "276-9250-830_276-9250-832",
+   "solid": true,
+   "dynamic": false,
+   "color": "#1f5fbf",
+   "min": [
+    66.4645,
+    -61.1917,
+    3.248
+   ],
+   "max": [
+    71.8572,
+    -56.3347,
+    14.3701
+   ]
+  },
+  {
+   "id": 430,
+   "category": "loader",
+   "part": "276-9250-031_Red Loader",
+   "assembly": "276-9250-830_276-9250-831",
+   "solid": true,
+   "dynamic": false,
+   "color": "#d0312d",
+   "min": [
+    -71.8572,
+    56.3347,
+    3.5573
+   ],
+   "max": [
+    -66.4645,
+    61.1917,
+    14.6793
+   ]
+  }
+ ]
+}
