@@ -19,9 +19,9 @@ void disabled() {}
 
 void competition_initialize() {}
 
-void autonomous() {}
+void autonomous() {} 
 
-void opcontrol() {
+void opcontrol() { 
 
 
 
