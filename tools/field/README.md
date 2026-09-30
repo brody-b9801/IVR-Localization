@@ -11,14 +11,16 @@ python render_field.py ../../Resources/field-model/field_boxes.json out --custom
 ```
 
 - `step_parse.py` / `extract_step.py` read the STEP assembly directly (no CAD kernel):
-  instance transforms plus each solid's bounds from its edges (arcs and splines included).
-- `build_field_model.py` makes one axis-aligned box per part instance (the field-frame bounds
-  of the part's own CAD bounding box, so angled parts come out slightly oversized). Fasteners
-  and game elements are skipped, since game elements move during a match
-  (`--include-game-elements` adds one box per element, flagged `dynamic`). Tape and
-  alliance-station outlines are split into one thin box per straight strip, and diagonal
-  strips into short pieces. Each match loader is one box whose bottom is raised to the
-  bottom edge of its field-facing wall, leaving the gap elements are pulled out through.
+  instance transforms plus each solid's bounds from its edges (arcs and splines included),
+  in both the part's own frame and the world frame.
+- `build_field_model.py` bounds the CAD geometry itself in the field frame, so tilted parts
+  aren't oversized. It emits one floor slab, one prism per side of the perimeter wall (the
+  +-Y walls run through the corners), one box per alliance bar, one box per toggle stack
+  (its blocks and AprilTags), and three boxes per match loader (the tube above the gap
+  elements are pulled out through, the base behind that gap, and the hook over the wall top),
+  none of which enter the wall. The toggles' base plates (inside the foam tiles), floor tape
+  and hardware are left out, and so are game elements, since they move during a match
+  (`--include-game-elements` adds one box per element, flagged `dynamic`).
 - `render_field.py` is a z-buffered software renderer (numpy + Pillow).
 
 ## Frame and format

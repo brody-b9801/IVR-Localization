@@ -35,7 +35,7 @@ VIEWS = {
 # Box face corner indices; corners are ordered by bits (x, y, z) of local axes.
 FACES = [(0, 2, 6, 4), (1, 5, 7, 3), (0, 4, 5, 1), (2, 3, 7, 6), (0, 1, 3, 2), (4, 6, 7, 5)]
 EDGES = [(i, j) for i in range(8) for j in range(i + 1, 8) if bin(i ^ j).count("1") == 1]
-TRANSLUCENT = {"perimeter_panel": 0.35}
+TRANSLUCENT = {"wall": 0.35}
 
 
 def box_corners(b):

@@ -1,5 +1,6 @@
 """Walk the field STEP assembly and dump every solid instance with its world
-transform, colour and local-frame bounding box.
+transform, colour, and its bounding box in both its own frame and the world
+frame.
 
 Used as a module by build_field_model.py; run standalone to dump the raw
 records to JSON. Units: millimetres, in the STEP file's world frame.
@@ -119,18 +120,7 @@ def extract(step_path, s=None):
                 ityp, ip = s.get(iid)
                 if ityp == "MANIFOLD_SOLID_BREP":
                     pts = np.array(s.shell_points(ref(ip[1])))
-                    rec = (iid, "solid", item_color.get(iid), pts)
-                    ext = pts.max(0) - pts.min(0)
-                    thin = int(np.argmin(ext))
-                    if ext[thin] < 3.0:
-                        # thin sheet (tape, floor marking): also keep a strip decomposition
-                        for sign in (1.0, -1.0):
-                            up = np.eye(3)[thin] * sign
-                            strips = s.flat_strips(ref(ip[1]), up, float(ext[thin]))
-                            if strips:
-                                rec = rec + (strips,)
-                                break
-                    out.append(rec)
+                    out.append((iid, "solid", item_color.get(iid), pts))
                 elif ityp == "SHELL_BASED_SURFACE_MODEL":
                     pts = []
                     for sh in ip[1]:
@@ -145,31 +135,29 @@ def extract(step_path, s=None):
     assert len(roots) == 1, roots
     records = []
 
-    def walk(pd, xf, path, occs, parent_xf):
+    def walk(pd, xf, path, occs):
         path = path + [pd_name[pd]]
         rep = pd_rep.get(pd)
         if rep is not None:
-            for sid, kind, color, pts, *strips in solids_of_rep(rep):
-                lo, hi = pts.min(0), pts.max(0)
-                rec = {
+            for sid, kind, color, pts in solids_of_rep(rep):
+                world = pts @ xf[:3, :3].T + xf[:3, 3]
+                records.append({
                     "path": path,
                     "occ": occs,  # assembly occurrence ids, root -> this part instance
                     "solid_id": sid,
                     "kind": kind,
                     "color": color,
                     "xform": xf.tolist(),
-                    "parent_xform": parent_xf.tolist(),  # enclosing assembly instance
-                    "local_min": lo.tolist(),
-                    "local_max": hi.tolist(),
-                }
-                if strips:
-                    rec["strips"] = [{"center": c.tolist(), "axes": a.tolist(), "size": z.tolist()}
-                                     for c, a, z in strips[0]]
-                records.append(rec)
+                    "local_min": pts.min(0).tolist(),
+                    "local_max": pts.max(0).tolist(),
+                    # bounds of the transformed geometry: tight even for rotated parts
+                    "world_min": world.min(0).tolist(),
+                    "world_max": world.max(0).tolist(),
+                })
         for child, t, occ in children.get(pd, []):
-            walk(child, xf @ t, path, occs + [occ], xf)
+            walk(child, xf @ t, path, occs + [occ])
 
-    walk(roots[0], np.eye(4), [], [], np.eye(4))
+    walk(roots[0], np.eye(4), [], [])
     return records
 
 

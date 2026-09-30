@@ -1,30 +1,29 @@
 """Build a rectangular-prism model of the V5RC field from the field STEP file.
 
 Every box is axis-aligned in the field frame, given by its min and max
-corners. Each non-hardware part instance in the STEP assembly becomes one box:
-the field-frame bounding box of the part's own CAD bounding box. Parts that sit
-at an angle therefore come out a little oversized; that is accepted as an
-approximation.
+corners, and bounds the actual CAD geometry in that frame (not the part's own
+bounding box rotated into it, which oversizes tilted parts).
 
-Special cases:
-  * Floor markings (tape lines, alliance-station outlines) are thin sheets
-    whose bounding box would be meaningless, so they are split into one box
-    per straight strip. Diagonal strips are further cut into short pieces so
-    their axis-aligned boxes stay close to the line.
-  * Each match loader is a single box. The loader's field-facing wall stops
-    short of the floor, leaving a gap elements are pulled out through, so the
-    box's bottom is raised to the bottom edge of that wall (measured from the
-    CAD for each loader).
+What becomes a box:
+  * floor     one slab covering the foam tiles inside the walls.
+  * wall      one prism per side of the perimeter, from its field-facing
+              surface out to its outer edge and from its lowest to its highest
+              point. The ends of the +-Y walls cover the corners.
+  * alliance_bar  one box per alliance bar assembly.
+  * toggle    one box per toggle stack (its blocks and the AprilTags on them).
+  * loader    each match loader is split so no box enters the wall: the tube
+              above the gap elements are pulled out through, the base behind
+              that gap, and the hook that sits over the wall top.
+The toggles' base plates (which sit inside the foam tiles) and floor tape are
+left out, as are fasteners. Game elements are left out by default too, since they move during
+a match; with --include-game-elements each element becomes one box, flagged
+"dynamic".
 
 Output frame ("field frame"), inches:
     origin  field centre, on the top surface of the foam tiles
     +X      towards the blue alliance station   (STEP +X)
     +Y      STEP -Z
     +Z      up                                    (STEP +Y)
-
-Game elements are left out by default: they move during a match, so they
-don't belong in a localisation map. With --include-game-elements each element
-(two coloured halves in the CAD) becomes one box, flagged "dynamic".
 
     python build_field_model.py <field.STEP> <out.json> [--include-game-elements]
 """
@@ -41,52 +40,69 @@ from step_parse import Step
 
 MM_PER_IN = 25.4
 
-# Diagonal strips are cut into pieces about this many strip-widths long.
-DIAGONAL_PIECE_WIDTHS = 4
-
 # The main body of a match loader; its field-facing wall defines the floor gap.
 LOADER_BODY = re.compile(r"^276-9250-031")
-# Points within this distance of the loader's field-facing extreme count as
-# being on its front wall (mm).
-LOADER_FRONT_TOL_MM = 3.0
+# Points within this distance of a face count as lying on it (inches).
+LOADER_TOL_IN = 3.0 / MM_PER_IN
 
 # STEP (x, y-up, z) -> field (x, y, z-up); proper rotation (det = +1).
 STEP_TO_FIELD_ROT = np.array([[1.0, 0, 0], [0, 0, -1.0], [0, 1.0, 0]])
 
-# Fasteners, springs and washers: too small to matter for a field model.
+# Fasteners, springs, washers, and the clips on the outside of the wall behind
+# the loaders: too small to matter for a field model.
 HARDWARE = re.compile(
-    r"^(SBT0832|THF0832|NNY_|SPTM3|94629A270|276-7596-003$|276-7596-004|276-9250-027$)"
+    r"^(SBT0832|THF0832|NNY_|SPTM3|94629A270|276-7596-003$|276-7596-004|276-9250-027$"
+    r"|276-8354-404$)"
 )
 
 # (regex on the leaf part name, category)
 CATEGORIES = [
-    (r"^276-6904-001$", "floor_tile"),
-    (r"^276-7596-01[45]$", "perimeter_panel"),
-    (r"^276-7596-35[01]_", "perimeter_rail"),
-    (r"^276-7596-31[67]", "perimeter_post"),
-    (r"^(276-7596-0(05|06|08|09|10)|276-8354-404)$", "perimeter_foot"),
-    (r"^276-4847-011$", "goal_base"),
-    (r"^276-9250-00[345]", "goal"),
-    (r"^276-9250-006_AprilTag", "apriltag"),
+    (r"^276-6904-001$", "floor"),
+    # panels, rails, posts and brackets of the perimeter
+    (r"^(276-7596-01[45]|276-7596-35[01]_|276-7596-31[67]|276-7596-0(05|06|08|09|10)$)",
+     "wall"),
+    # toggle blocks and the AprilTags on them
+    (r"^276-9250-00[3-6]", "toggle"),
+    # the plates under the toggles, inside the foam tiles
+    (r"^276-4847-011$", "toggle_base"),
     (r"^276-9250-00[12]_", "game_element"),
     (r"^276-9250-03[1-6]", "loader"),
     (r"^276-9250-02[1-4]", "alliance_bar"),
-    (r"^Tape-", "tape"),
-    (r"^Wall Alliance Stations", "alliance_station"),
+    (r"^(Tape-|Wall Alliance Stations)", "tape"),
 ]
+EXCLUDED_CATEGORIES = {"toggle_base", "tape"}
+
+# Perimeter parts whose field-facing side is the wall surface (panels and
+# rails); posts and corner brackets only stick out locally.
+WALL_FACE = re.compile(r"^(276-7596-01[45]|276-7596-35[01]_)")
+
+# Categories bounded as one box per enclosing assembly instance, found by the
+# innermost assembly in the part's path matching the regex.
+GROUP_BY = {
+    "game_element": r"^276-9250-8[01]x",
+    "alliance_bar": r"^276-9250-120",
+    "loader": r"^276-9250-830",
+    "toggle": r"^276-9250-840",
+}
 
 # Categories that a range sensor on the robot could actually hit.
-SOLID_CATEGORIES = {
-    "perimeter_panel", "perimeter_rail", "perimeter_post", "perimeter_foot",
-    "goal_base", "goal", "game_element", "loader", "alliance_bar",
-}
+SOLID_CATEGORIES = {"wall", "loader", "alliance_bar", "toggle", "game_element"}
 # Game elements move during a match; flag them so consumers can drop them.
 DYNAMIC_CATEGORIES = {"game_element"}
 
-# Floor markings are decomposed into strips rather than bounded as a whole.
-STRIP_CATEGORIES = {"tape", "alliance_station"}
-
-MIN_THICKNESS_IN = 0.02  # give zero-thickness surfaces (tape, tags) some depth
+COLORS = {
+    "floor": "#6b6f75",
+    "wall": "#bcd7e0",
+    "loader": "#9aa0a6",
+    "alliance_bar": "#8f8f8f",
+    "toggle": "#d9d9d9",
+}
+GAME_ELEMENT_COLORS = {
+    "276-9250-80x_Red-Neutral": "#d0312d",
+    "276-9250-80x_Blue-Neutral": "#1f5fbf",
+    "276-9250-80x_Red-Blue": "#8e44ad",
+    "276-9250-80x_Neutral-Neutral": "#f2c230",
+}
 
 
 def categorize(leaf):
@@ -96,140 +112,152 @@ def categorize(leaf):
     return None
 
 
-def color_for(path, category):
-    """Display colour (the STEP file itself carries no real colours)."""
-    leaf = path[-1]
-    joined = " ".join(path)
+def color_for(category, name, names):
+    """Display colour (the STEP file itself carries no real colours). `names`
+    are the box's assembly and part names."""
     if category == "game_element":
-        # one box per element; colour it after the element's non-neutral half
-        return {
-            "276-9250-80x_Red-Neutral": "#d0312d",
-            "276-9250-80x_Blue-Neutral": "#1f5fbf",
-            "276-9250-80x_Red-Blue": "#8e44ad",
-            "276-9250-80x_Neutral-Neutral": "#f2c230",
-        }.get(leaf, "#4a4d52")
-    if category in ("tape", "alliance_station", "loader", "alliance_bar", "goal"):
+        return GAME_ELEMENT_COLORS.get(name, "#4a4d52")
+    if category in ("loader", "alliance_bar", "toggle"):
+        joined = " ".join(names)
         if "Red" in joined:
-            return "#d0312d" if category != "tape" else "#e8e8e8"
+            return "#d0312d"
         if "Blue" in joined:
-            return "#1f5fbf" if category != "tape" else "#e8e8e8"
-    return {
-        "floor_tile": "#6b6f75",
-        "perimeter_panel": "#bcd7e0",
-        "perimeter_rail": "#c4c8cc",
-        "perimeter_post": "#a9adb2",
-        "perimeter_foot": "#3a3c40",
-        "goal_base": "#8a8e93",
-        "goal": "#d9d9d9",
-        "apriltag": "#111111",
-        "loader": "#9aa0a6",
-        "alliance_bar": "#8f8f8f",
-        "tape": "#e8e8e8",
-    }.get(category, "#999999")
+            return "#1f5fbf"
+    return COLORS.get(category, "#999999")
 
 
-def signed_permutation(r, tol=1e-6):
-    return np.allclose(np.abs(r).max(axis=0), 1.0, atol=tol) and np.allclose(
-        np.abs(r).sum(axis=0), 1.0, atol=tol * 3
-    )
+def group_of(record, category):
+    """(key, name, path) of the box a part belongs to."""
+    path, occ = record["path"], record["occ"]
+    pattern = GROUP_BY.get(category)
+    if pattern is None:
+        return (category, tuple(occ)), path[-1], path
+    for i in range(len(path) - 1, 0, -1):
+        if re.search(pattern, path[i]):
+            # occ[i - 1] is the occurrence of path[i]
+            return (category, tuple(occ[:i])), path[i], path[:i + 1]
+    raise ValueError(f"{category} part outside a {pattern} assembly: {' / '.join(path)}")
 
 
-def box_aabbs(center, rot, size):
-    """Axis-aligned (min, max) boxes covering an oriented box (field frame, in).
+def wall_faces(parts):
+    """{(axis, sign): coordinate of that wall's field-facing surface}, where the
+    wall on side `sign` of `axis` holds the parts centred on that side."""
+    faces = {}
+    for ax in (0, 1):
+        for sign in (-1, 1):
+            side = [(lo, hi) for leaf, lo, hi in parts if WALL_FACE.search(leaf)
+                    and sign * (lo + hi)[ax] > abs((lo + hi)[1 - ax])]
+            faces[ax, sign] = (min(lo[ax] for lo, _ in side) if sign > 0
+                               else max(hi[ax] for _, hi in side))
+    return faces
 
-    A long, thin box lying diagonally (a tape strip) is cut along its length
-    first, so the axis-aligned boxes hug the strip instead of covering a
-    square the size of its whole diagonal.
-    """
-    n, long_ax = 1, int(np.argmax(size))
-    if not signed_permutation(rot):
-        mid = np.sort(size)[1]
-        if np.abs(rot[:, long_ax]).max() < 0.99 and size[long_ax] > DIAGONAL_PIECE_WIDTHS * mid > 0:
-            n = int(np.ceil(size[long_ax] / (DIAGONAL_PIECE_WIDTHS * mid)))
-    piece = size.copy()
-    piece[long_ax] = size[long_ax] / n
-    half = np.maximum(np.abs(rot) @ piece / 2, MIN_THICKNESS_IN / 2)
+
+def wall_boxes(parts, faces):
+    """One (name, min, max) box per side of the perimeter."""
+    lo = np.min([p[1] for p in parts], axis=0)
+    hi = np.max([p[2] for p in parts], axis=0)
     out = []
-    for k in range(n):
-        c = center + rot[:, long_ax] * (-size[long_ax] / 2 + (k + 0.5) * piece[long_ax])
-        out.append((c - half, c + half))
+    for ax, sign in [(0, 1), (0, -1), (1, 1), (1, -1)]:
+        b_lo, b_hi = lo.copy(), hi.copy()
+        if sign > 0:
+            b_lo[ax] = faces[ax, sign]
+        else:
+            b_hi[ax] = faces[ax, sign]
+        if ax == 0:  # the +-Y walls run the full length and cover the corners
+            b_lo[1], b_hi[1] = faces[1, -1], faces[1, 1]
+        out.append((f"{'+' if sign > 0 else '-'}{'XY'[ax]} wall", b_lo, b_hi))
     return out
 
 
-def loader_gap_top(s, solids, step_to_field):
-    """Height (field frame, in) of the bottom edge of a match loader's
-    field-facing wall, i.e. the top of the gap under the loader."""
-    pts = []
-    for sid, xf in solids:
-        p = np.array(s.shell_points(ref(s.get(sid)[1][1])))
-        m = step_to_field @ xf
-        pts.append(p @ m[:3, :3].T + m[:3, 3])
-    pts = np.vstack(pts)
+def loader_boxes(pts, body_pts, faces):
+    """Split a match loader into (name, min, max) boxes that stay out of the wall.
+
+    pts: field-frame points of all the loader's parts; body_pts: those of its
+    main body, whose field-facing wall stops short of the floor, leaving the
+    gap elements are pulled out through.
+    """
     c = pts.mean(0)
     ax = 0 if abs(c[0]) > abs(c[1]) else 1  # the loader backs onto the wall on this axis
-    into_field = -np.sign(c[ax]) * pts[:, ax]
-    front = into_field >= into_field.max() - LOADER_FRONT_TOL_MM / MM_PER_IN
-    return float(pts[front, 2].min())
+    lat = 1 - ax
+    sign = 1 if c[ax] > 0 else -1
+    tol = LOADER_TOL_IN
 
+    def into(p):  # distance into the field, measured from the wall surface
+        return sign * (faces[ax, sign] - p[:, ax])
 
-def overlaps(a, b, tol=0.05):
-    return bool(np.all(a[0] <= b[1] + tol) and np.all(b[0] <= a[1] + tol))
+    body_into = into(body_pts)
+    front = body_into >= body_into.max() - tol
+    gap_top = body_pts[front, 2].min()
+
+    d = into(pts)
+    z = pts[:, 2]
+    inside = d > tol
+
+    def box(name, sel, d_lo, d_hi, z_lo, z_hi):
+        lo, hi = np.zeros(3), np.zeros(3)
+        lo[ax], hi[ax] = sorted((faces[ax, sign] - sign * d_lo, faces[ax, sign] - sign * d_hi))
+        lo[lat], hi[lat] = pts[sel, lat].min(), pts[sel, lat].max()
+        lo[2], hi[2] = z_lo, z_hi
+        return name, lo, hi
+
+    tube = inside & (z > gap_top - tol)
+    out = [box("tube", tube, 0.0, d.max(), gap_top, z[tube].max())]
+    base = inside & (z < gap_top - tol)
+    if base.any():
+        out.append(box("base", base, 0.0, d[base].max(), z.min(), gap_top))
+    hook = d < -tol
+    if hook.any():
+        out.append(box("hook", hook, d[hook].min(), 0.0, z[hook].min(), z[hook].max()))
+    return out
 
 
 def build(step_path, include_game_elements=False):
     s = Step(step_path)
     records = extract(step_path, s)
 
-    # Group solids into box instances: normally one per part occurrence, but a
-    # game element (a sub-assembly of two coloured halves) becomes a single box
-    # bounding all of its parts in the element assembly's frame.
-    instances = OrderedDict()
-    for r in records:
-        leaf = r["path"][-1]
-        lo, hi = np.array(r["local_min"]), np.array(r["local_max"])
-        if categorize(leaf) == "game_element" and len(r["occ"]) >= 2:
-            key = tuple(r["occ"][:-1])
-            frame = np.array(r["parent_xform"])
-            name = r["path"][-2]
-            # re-express this part's bounds in the element assembly's frame
-            t = np.linalg.inv(frame) @ np.array(r["xform"])
-            c = np.array([[x, y, z, 1] for x in (lo[0], hi[0]) for y in (lo[1], hi[1])
-                          for z in (lo[2], hi[2])])
-            pc = (t @ c.T)[:3].T
-            lo, hi = pc.min(0), pc.max(0)
-            path = r["path"][:-1]
-        else:
-            key = tuple(r["occ"])
-            frame = np.array(r["xform"])
-            name = leaf
-            path = r["path"]
-        inst = instances.setdefault(key, {"path": path, "leaf": leaf, "name": name,
-                                          "occ_root": r["occ"][0], "xform": frame,
-                                          "lo": [], "hi": [], "strips": [], "solids": []})
-        inst["lo"].append(lo)
-        inst["hi"].append(hi)
-        inst["strips"].extend(r.get("strips", []))
-        inst["solids"].append((r["solid_id"], np.array(r["xform"])))
-
-    # Floor height = top of the foam tiles, in STEP coordinates.
-    tile_tops = []
-    for inst in instances.values():
-        if categorize(inst["leaf"]) == "floor_tile":
-            lo, hi = np.min(inst["lo"], 0), np.max(inst["hi"], 0)
-            c = np.array([[x, y, z, 1] for x in (lo[0], hi[0]) for y in (lo[1], hi[1])
-                          for z in (lo[2], hi[2])])
-            tile_tops.append((inst["xform"] @ c.T)[1].max())
+    # Floor height = top of the foam tiles, in STEP coordinates (STEP +Y is up).
+    tile_tops = [r["world_max"][1] for r in records if categorize(r["path"][-1]) == "floor"]
     floor_y = float(np.median(tile_tops))
 
     step_to_field = np.eye(4)
     step_to_field[:3, :3] = STEP_TO_FIELD_ROT / MM_PER_IN
     step_to_field[:3, 3] = STEP_TO_FIELD_ROT @ np.array([0, -floor_y, 0]) / MM_PER_IN
 
-    def make_box(cat, part, path, color, lo, hi):
+    def to_field(lo, hi):
+        # step_to_field only permutes and scales axes, so boxes map to boxes
+        c = np.array([[x, y, z, 1] for x in (lo[0], hi[0]) for y in (lo[1], hi[1])
+                      for z in (lo[2], hi[2])])
+        f = (step_to_field @ c.T)[:3].T
+        return f.min(0), f.max(0)
+
+    def field_points(r):
+        p = np.array(s.shell_points(ref(s.get(r["solid_id"])[1][1])))
+        m = step_to_field @ np.array(r["xform"])
+        return p @ m[:3, :3].T + m[:3, 3]
+
+    # Group the parts into boxes.
+    groups = OrderedDict()
+    skipped, excluded = {}, {}
+    for r in records:
+        leaf = r["path"][-1]
+        if HARDWARE.search(leaf):
+            skipped[leaf] = skipped.get(leaf, 0) + 1
+            continue
+        cat = categorize(leaf)
+        if cat is None:
+            raise ValueError(f"uncategorised part: {leaf}")
+        if cat in EXCLUDED_CATEGORIES or (cat in DYNAMIC_CATEGORIES and not include_game_elements):
+            excluded[cat] = excluded.get(cat, 0) + 1
+            continue
+        key, name, path = group_of(r, cat)
+        g = groups.setdefault(key, {"category": cat, "name": name, "path": path, "parts": []})
+        g["parts"].append((r, *to_field(r["world_min"], r["world_max"])))
+
+    def make_box(cat, part, assembly, color, lo, hi):
         return {
             "category": cat,
             "part": part,
-            "assembly": " / ".join(path[1:-1]),
+            "assembly": assembly,
             "solid": cat in SOLID_CATEGORIES,
             "dynamic": cat in DYNAMIC_CATEGORIES,
             "color": color,
@@ -237,65 +265,50 @@ def build(step_path, include_game_elements=False):
             "max": np.round(hi, 4).tolist(),
         }
 
+    by_cat = {}
+    for g in groups.values():
+        by_cat.setdefault(g["category"], []).append(g)
+
+    walls = [(r["path"][-1], lo, hi) for g in by_cat["wall"] for r, lo, hi in g["parts"]]
+    faces = wall_faces(walls)
+    perimeter = by_cat["wall"][0]["path"][1]
     boxes = []
-    loader_parts = []  # (inst, (lo, hi)); merged into one box per loader below
-    skipped = {}
-    for inst in instances.values():
-        leaf = inst["leaf"]
-        if HARDWARE.search(leaf):
-            skipped[leaf] = skipped.get(leaf, 0) + 1
-            continue
-        cat = categorize(leaf)
-        if cat is None:
-            raise ValueError(f"uncategorised part: {leaf}")
-        if cat in DYNAMIC_CATEGORIES and not include_game_elements:
-            continue
 
-        m = step_to_field @ inst["xform"]  # part frame (mm) -> field frame (in)
-        if cat in STRIP_CATEGORIES and inst["strips"]:
-            local = [(np.array(st["center"]), np.array(st["axes"]), np.array(st["size"]))
-                     for st in inst["strips"]]
-        else:
-            lo, hi = np.min(inst["lo"], 0), np.max(inst["hi"], 0)
-            local = [((lo + hi) / 2, np.eye(3), hi - lo)]
+    tiles = [(lo, hi) for g in by_cat["floor"] for _, lo, hi in g["parts"]]
+    floor_lo = np.array([faces[0, -1], faces[1, -1], min(lo[2] for lo, _ in tiles)])
+    floor_hi = np.array([faces[0, 1], faces[1, 1], max(hi[2] for _, hi in tiles)])
+    boxes.append(make_box("floor", "foam tiles", perimeter, COLORS["floor"], floor_lo, floor_hi))
 
-        for c_local, axes, size_mm in local:
-            rot = m[:3, :3] * MM_PER_IN @ axes  # box axes in the field frame (orthonormal)
-            center = m[:3, :3] @ c_local + m[:3, 3]
-            for lo, hi in box_aabbs(center, rot, size_mm / MM_PER_IN):
-                if cat == "loader":
-                    loader_parts.append((inst, (lo, hi)))
-                else:
-                    boxes.append(make_box(cat, inst["name"], inst["path"],
-                                          color_for(inst["path"], cat), lo, hi))
+    for name, lo, hi in wall_boxes(walls, faces):
+        boxes.append(make_box("wall", name, perimeter, COLORS["wall"], lo, hi))
 
-    # One box per match loader: group the loader's parts (touching boxes within
-    # the same loader assembly), then lift the bottom to the top of the gap.
-    groups = []
-    for inst, bb in loader_parts:
-        hits = [g for g in groups if g["root"] == inst["occ_root"]
-                and any(overlaps(bb, b) for _, b in g["parts"])]
-        merged = {"root": inst["occ_root"], "parts": [(inst, bb)]}
-        for g in hits:
-            merged["parts"] += g["parts"]
-        groups = [g for g in groups if not any(g is h for h in hits)] + [merged]
-    for g in groups:
-        body = [inst for inst, _ in g["parts"] if LOADER_BODY.search(inst["leaf"])]
-        if not body:
-            raise ValueError("match loader group without a loader body")
-        lo = np.min([b[0] for _, b in g["parts"]], axis=0)
-        hi = np.max([b[1] for _, b in g["parts"]], axis=0)
-        lo[2] = loader_gap_top(s, [sd for inst in body for sd in inst["solids"]], step_to_field)
-        boxes.append(make_box("loader", body[0]["name"], body[0]["path"],
-                              color_for(body[0]["path"], "loader"), lo, hi))
+    for cat in ("alliance_bar", "loader", "toggle", "game_element"):
+        for g in by_cat.get(cat, []):
+            names = [g["name"]] + [r["path"][-1] for r, _, _ in g["parts"]]
+            color = color_for(cat, g["name"], names)
+            assembly = " / ".join(g["path"][1:-1])
+            if cat == "loader":
+                pts = [(LOADER_BODY.search(r["path"][-1]) is not None, field_points(r))
+                       for r, _, _ in g["parts"]]
+                body = [p for is_body, p in pts if is_body]
+                if not body:
+                    raise ValueError(f"match loader without a loader body: {g['name']}")
+                for piece, lo, hi in loader_boxes(np.vstack([p for _, p in pts]),
+                                                  np.vstack(body), faces):
+                    boxes.append(make_box(cat, f"{g['name']} {piece}", assembly, color, lo, hi))
+            else:
+                lo = np.min([lo for _, lo, _ in g["parts"]], axis=0)
+                hi = np.max([hi for _, _, hi in g["parts"]], axis=0)
+                boxes.append(make_box(cat, g["name"], assembly, color, lo, hi))
 
     boxes = [{"id": i, **b} for i, b in enumerate(boxes)]
 
     return {
-        "description": "V5RC field approximated by rectangular prisms, one per part instance "
-                       "of the field STEP (hardware excluded; "
-                       + ("one per game element)." if include_game_elements
-                          else "game elements excluded)."),
+        "description": "V5RC field approximated by rectangular prisms: the floor, one prism per "
+                       "wall, alliance bars, match loaders and toggles. Toggle base plates, floor "
+                       "tape and hardware are excluded; "
+                       + ("game elements are one box each (dynamic)." if include_game_elements
+                          else "so are game elements."),
         "source": step_path.replace("\\", "/").split("/")[-1],
         "units": "in",
         "frame": {
@@ -308,6 +321,7 @@ def build(step_path, include_game_elements=False):
         "box_format": "every box is axis-aligned in the field frame: min = [x, y, z] of its "
                       "lowest corner, max = [x, y, z] of its highest corner",
         "skipped_hardware": dict(sorted(skipped.items())),
+        "excluded_parts": dict(sorted(excluded.items())),
         "boxes": boxes,
     }
 

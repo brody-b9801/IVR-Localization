@@ -2,13 +2,14 @@
 #include <iostream>
 #include <vector>
 #include "api.h"
-#include "utilities.h"
+#include "utilities.hpp"
+#include "robot.h"
 
 using namespace std;
 using namespace utilities;
 
 class fieldRepresentation {
-    public:
+    private:
         struct distanceSensorDistances {
             double frontDistance;
             double leftDistance;
@@ -24,16 +25,15 @@ class fieldRepresentation {
         };
 
         struct distanceSensor {
-            string direction;
+            vector3 direction;
             pros::Distance sensor;
             vector3 centerOffset;
         };
 
-    private:
-        double hitDistance(fieldObject); //return -1 if not hit
+        double hitDistance(fieldObject object, distanceSensor sensor, vector3 robotPosition, double robotHeading); //return -1 if not hit
 
-        // static objects on the field, from Resources/field-model/field_boxes.json (floor excluded)
         static vector<fieldObject> fieldObjects();
+        static vector<distanceSensor> distanceSensors();
 
         vector<fieldObject> objects_;
         vector<distanceSensor> sensors_;

@@ -36,9 +36,20 @@ vector<fieldRepresentation::fieldObject> fieldRepresentation::fieldObjects() {
     return objects;
 }
 
+vector<fieldRepresentation::distanceSensor> fieldRepresentation::distanceSensors() {
+    vector<distanceSensor> sensors;
+    //0 front, 1 right, 2 back, 3 left
+    sensors.push_back(distanceSensor{vector3(0, 1, 0), distanceFront, vector3(0, 0, 0)});
+    sensors.push_back(distanceSensor{vector3(1, 0, 0), distanceRight, vector3(0, 0, 0)});
+    sensors.push_back(distanceSensor{vector3(0, -1, 0), distanceBack, vector3(0, 0, 0)});
+    sensors.push_back(distanceSensor{vector3(-1, 0, 0), distanceLeft, vector3(0, 0, 0)});
+
+    return sensors;
+}
+
 fieldRepresentation::distanceSensorDistances fieldRepresentation::simulateCast(distanceSensor sensor, vector3 castDirection, vector3 robotPosition) {
 
 }
-double fieldRepresentation::hitDistance(fieldObject)  { //return -1 if not hit
-
+double fieldRepresentation::hitDistance(fieldObject object, distanceSensor sensor, vector3 robotPosition, double robotHeading)  { //return -1 if not hit
+    vector3 sensorPos = sensor.centerOffset + robotPosition;
 }
