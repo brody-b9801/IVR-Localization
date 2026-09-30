@@ -103,19 +103,20 @@ namespace utilities {
             vector3 centerOffset_;
             double angle_;
             vector3 position;
-            vector3 direction;            
+            vector3 direction;        
+            pros::Distance sensor;    
+
         public: 
-            distanceSensor(double angle, vector3 centerOffset) : defaultAngle_(angle), centerOffset_(centerOffset), angle_(angle) {}
+            distanceSensor(double angle, vector3 centerOffset, pros::Distance sensor) : defaultAngle_(angle), centerOffset_(centerOffset), angle_(angle), sensor(sensor) {}
 
             void update(double robotAngle, vector3 robotPosition) {
                 angle_ = defaultAngle_ + robotAngle;
-                // headings are compass-style like LemLib (0 = +Y, clockwise positive),
-                // which is a negative rotation about +Z
                 position = robotPosition + centerOffset_.rotated(vector3(0, 0, 1), -robotAngle);
                 direction = vector3(std::sin(deg2rad(angle_)), std::cos(deg2rad(angle_)), 0);
             }
             double getAngle() const { return angle_; }
             vector3 getPosition() const { return position; }
             vector3 getDirection() const { return direction; }
+            pros::Distance getSensor() const { return sensor; }
     };
 }

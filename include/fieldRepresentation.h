@@ -24,12 +24,6 @@ class fieldRepresentation {
             vector3 max;
         };
 
-        struct distanceSensor {
-            vector3 direction;
-            pros::Distance sensor;
-            vector3 centerOffset;
-        };
-
         double hitDistance(fieldObject object, distanceSensor sensor, vector3 robotPosition, double robotHeading); //return -1 if not hit
 
         static vector<fieldObject> fieldObjects();
