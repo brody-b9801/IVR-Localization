@@ -84,7 +84,7 @@ double fieldRepresentation::closestHit(const vector<fieldObject>& candidates, ve
     double closest = maxSensorRange;
     bool hit = false;
     for (const fieldObject& object : candidates) {
-        double distance = hitDistance(object, sensorPos, sensorDir);
+        double distance = hitDistance(object, sensorPos, sensorDir, closest);
         if (distance >= 0 && distance < closest) {
             closest = distance;
             hit = true;
@@ -93,7 +93,7 @@ double fieldRepresentation::closestHit(const vector<fieldObject>& candidates, ve
     return hit ? closest : -1;
 }
 
-double fieldRepresentation::hitDistance(const fieldObject& object, vector3 sensorPos, vector3 sensorDir)  { //return -1 if not hit
+double fieldRepresentation::hitDistance(const fieldObject& object, vector3 sensorPos, vector3 sensorDir, double closestSoFar)  { //return -1 if not hit or not closer than closestSoFar
     //https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes//ray-box-intersection.html
     vector3 objectMax = getMax(object);
     vector3 objectMin = getMin(object);
@@ -106,8 +106,10 @@ double fieldRepresentation::hitDistance(const fieldObject& object, vector3 senso
         tmax_x = (objectMax.x() - sensorPos.x()) / sensorDir.x(); 
     } else { 
         tmin_x = (objectMax.x() - sensorPos.x()) / sensorDir.x();
-        tmax_x = (objectMin.x() - sensorPos.x()) / sensorDir.x(); 
+        tmax_x = (objectMin.x() - sensorPos.x()) / sensorDir.x();
     }
+   
+    if (tmin_x >= closestSoFar) return -1;
 
     double tmin_y;
     double tmax_y;
@@ -116,8 +118,9 @@ double fieldRepresentation::hitDistance(const fieldObject& object, vector3 senso
         tmax_y = (objectMax.y() - sensorPos.y()) / sensorDir.y(); 
     } else { 
         tmin_y = (objectMax.y() - sensorPos.y()) / sensorDir.y();
-        tmax_y = (objectMin.y() - sensorPos.y()) / sensorDir.y(); 
+        tmax_y = (objectMin.y() - sensorPos.y()) / sensorDir.y();
     }
+    if (tmin_y >= closestSoFar) return -1;
 
     if (tmin_x > tmax_y || tmin_y > tmax_x) return -1;
     double tmin = (tmin_x > tmin_y) ? tmin_x : tmin_y;

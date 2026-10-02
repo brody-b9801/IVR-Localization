@@ -27,7 +27,7 @@ class fieldRepresentation {
 
         static constexpr double maxSensorRange = 78.74; 
 
-        double hitDistance(const fieldObject& object, vector3 sensorPos, vector3 sensorDir); //return -1 if not hit
+        double hitDistance(const fieldObject& object, vector3 sensorPos, vector3 sensorDir, double closestSoFar); //return -1 if not hit or not closer than closestSoFar
         double closestHit(const vector<fieldObject>& candidates, vector3 sensorPos, vector3 sensorDir); //return -1 if nothing in range
 
         static vector<fieldObject> fieldObjects();
