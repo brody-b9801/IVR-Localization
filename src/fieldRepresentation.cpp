@@ -2,7 +2,16 @@
 #include "mcl.h"
 
 fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors) : fieldRepresentation(sensors, fieldObjects()) {}
-fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors, vector<fieldObject> objects) : objects_(objects), sensors_(sensors) {}
+fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors, vector<fieldObject> objects) : objects_(objects), sensors_(sensors) {
+    for (const distanceSensor& sensor : sensors_) {
+        double sensorZ = sensor.getCenterOffset().z();
+        vector<fieldObject> candidates;
+        for (const fieldObject& object : objects_) {
+            if (sensorZ >= object.min.z() && sensorZ <= object.max.z()) candidates.push_back(object);
+        }
+        sensorCandidates_.push_back(candidates);
+    }
+}
 
 // Axis-aligned boxes in inches: origin at field centre on top of the foam tiles,
 // +X towards the blue alliance station, +Z up. min/max are opposite corners.
@@ -58,7 +67,7 @@ fieldRepresentation::distanceSensorDistances fieldRepresentation::simulateCast(v
 
         vector3 sensorPos = particlePos + vector3(offset.x() * c + offset.y() * s, offset.y() * c - offset.x() * s, offset.z());
         vector3 sensorDir(dx * c + dy * s, dy * c - dx * s, 0);
-        results[i] = closestHit(sensorPos, sensorDir);
+        results[i] = closestHit(sensorCandidates_[i], sensorPos, sensorDir);
     }
 
     distanceSensorDistances distances;
@@ -71,10 +80,10 @@ fieldRepresentation::distanceSensorDistances fieldRepresentation::simulateCast(v
     return distances;
 }
 
-double fieldRepresentation::closestHit(vector3 sensorPos, vector3 sensorDir) {
+double fieldRepresentation::closestHit(const vector<fieldObject>& candidates, vector3 sensorPos, vector3 sensorDir) {
     double closest = maxSensorRange;
     bool hit = false;
-    for (const fieldObject& object : objects_) {
+    for (const fieldObject& object : candidates) {
         double distance = hitDistance(object, sensorPos, sensorDir);
         if (distance >= 0 && distance < closest) {
             closest = distance;
@@ -88,7 +97,7 @@ double fieldRepresentation::hitDistance(const fieldObject& object, vector3 senso
     //https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes//ray-box-intersection.html
     vector3 objectMax = getMax(object);
     vector3 objectMin = getMin(object);
-    if (sensorPos.z() > objectMax.z() || sensorPos.z() < objectMin.z()) return -1;
+    // height check is done once per sensor in the constructor (sensorCandidates_)
     
     double tmin_x;
     double tmax_x;
