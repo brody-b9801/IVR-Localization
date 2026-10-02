@@ -42,5 +42,4 @@ class fieldRepresentation {
         distanceSensorDistances simulateCast(vector3 particlePos, double particleHeading); // particleHeading = imu heading + particle's heading offset
         vector3 getMax(const fieldObject& object) { return object.max; }
         vector3 getMin(const fieldObject& object) { return object.min; }
-
 };

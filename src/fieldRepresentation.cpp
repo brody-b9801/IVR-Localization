@@ -1,4 +1,5 @@
 #include "fieldRepresentation.h"
+#include "mcl.h"
 
 fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors) : fieldRepresentation(sensors, fieldObjects()) {}
 fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors, vector<fieldObject> objects) : objects_(objects), sensors_(sensors) {}
@@ -66,6 +67,7 @@ fieldRepresentation::distanceSensorDistances fieldRepresentation::simulateCast(v
     distances.backDistance = results[2];
     distances.leftDistance = results[3];
     distances.updated = true;
+    MCL::setSensorData(distances);
     return distances;
 }
 
