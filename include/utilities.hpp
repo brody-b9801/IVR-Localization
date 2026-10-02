@@ -115,6 +115,8 @@ namespace utilities {
                 direction = vector3(std::sin(deg2rad(angle_)), std::cos(deg2rad(angle_)), 0);
             }
             double getAngle() const { return angle_; }
+            double getDefaultAngle() const { return defaultAngle_; }
+            vector3 getCenterOffset() const { return centerOffset_; }
             vector3 getPosition() const { return position; }
             vector3 getDirection() const { return direction; }
             pros::Distance getSensor() const { return sensor; }

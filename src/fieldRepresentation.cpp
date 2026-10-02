@@ -42,18 +42,51 @@ vector<distanceSensor> fieldRepresentation::distanceSensors() {
     return sensors;
 }
 
-fieldRepresentation::distanceSensorDistances fieldRepresentation::simulateCast(distanceSensor sensor, vector3 castDirection) {
+
+fieldRepresentation::distanceSensorDistances fieldRepresentation::simulateCast(vector3 particlePos, double particleHeading) {
+    double s = std::sin(deg2rad(particleHeading));
+    double c = std::cos(deg2rad(particleHeading));
+
+    double results[4] = {-1, -1, -1, -1}; //0 front, 1 right, 2 back, 3 left, same order as distanceSensors()
+    for (size_t i = 0; i < sensors_.size() && i < 4; i++) {
+        const distanceSensor& sensor = sensors_[i];
+        vector3 offset = sensor.getCenterOffset();
+        double defaultRad = deg2rad(sensor.getDefaultAngle());
+        double dx = std::sin(defaultRad);
+        double dy = std::cos(defaultRad);
+
+        vector3 sensorPos = particlePos + vector3(offset.x() * c + offset.y() * s, offset.y() * c - offset.x() * s, offset.z());
+        vector3 sensorDir(dx * c + dy * s, dy * c - dx * s, 0);
+        results[i] = closestHit(sensorPos, sensorDir);
+    }
+
     distanceSensorDistances distances;
+    distances.frontDistance = results[0];
+    distances.rightDistance = results[1];
+    distances.backDistance = results[2];
+    distances.leftDistance = results[3];
+    distances.updated = true;
     return distances;
 }
-double fieldRepresentation::hitDistance(fieldObject object, distanceSensor sensor)  { //return -1 if not hit
+
+double fieldRepresentation::closestHit(vector3 sensorPos, vector3 sensorDir) {
+    double closest = maxSensorRange;
+    bool hit = false;
+    for (const fieldObject& object : objects_) {
+        double distance = hitDistance(object, sensorPos, sensorDir);
+        if (distance >= 0 && distance < closest) {
+            closest = distance;
+            hit = true;
+        }
+    }
+    return hit ? closest : -1;
+}
+
+double fieldRepresentation::hitDistance(const fieldObject& object, vector3 sensorPos, vector3 sensorDir)  { //return -1 if not hit
     //https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes//ray-box-intersection.html
-    vector3 sensorPos = sensor.getPosition();
-    vector3 sensorDir = sensor.getDirection();
-    
     vector3 objectMax = getMax(object);
-    if (sensorPos.z() > objectMax.z()) return -1;
     vector3 objectMin = getMin(object);
+    if (sensorPos.z() > objectMax.z() || sensorPos.z() < objectMin.z()) return -1;
     
     double tmin_x;
     double tmax_x;

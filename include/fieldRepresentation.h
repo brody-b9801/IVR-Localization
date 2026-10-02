@@ -9,8 +9,8 @@ using namespace std;
 using namespace utilities;
 
 class fieldRepresentation {
-    private:
-        struct distanceSensorDistances {
+    public:
+        struct distanceSensorDistances { // inches, -1 if nothing in range
             double frontDistance;
             double leftDistance;
             double rightDistance;
@@ -18,13 +18,17 @@ class fieldRepresentation {
             bool updated;
         };
 
+    private:
         struct fieldObject {
             string type;
             vector3 min;
             vector3 max;
         };
 
-        double hitDistance(fieldObject object, distanceSensor sensor); //return -1 if not hit
+        static constexpr double maxSensorRange = 78.74; // V5 distance sensor max range, 2000mm in inches
+
+        double hitDistance(const fieldObject& object, vector3 sensorPos, vector3 sensorDir); //return -1 if not hit
+        double closestHit(vector3 sensorPos, vector3 sensorDir); //return -1 if nothing in range
 
         static vector<fieldObject> fieldObjects();
         static vector<distanceSensor> distanceSensors();
@@ -35,8 +39,8 @@ class fieldRepresentation {
     public:
         fieldRepresentation(vector<distanceSensor> sensors); // uses fieldObjects()
         fieldRepresentation(vector<distanceSensor> sensors, vector<fieldObject> objects);
-        distanceSensorDistances simulateCast(distanceSensor sensor, vector3 castDirection);
-        vector3 getMax(fieldObject object) { return object.max; }
-        vector3 getMin(fieldObject object) { return object.min; }
+        distanceSensorDistances simulateCast(vector3 particlePos, double particleHeading); // particleHeading = imu heading + particle's heading offset
+        vector3 getMax(const fieldObject& object) { return object.max; }
+        vector3 getMin(const fieldObject& object) { return object.min; }
 
 };
