@@ -13,11 +13,6 @@ vector<fieldRepresentation::fieldObject> fieldRepresentation::fieldObjects() {
     objects.push_back(fieldObject{"wall", vector3(-72.2338, 70.1968, -0.622), vector3(72.2338, 72.2338, 11.5368)}); // +Y wall
     objects.push_back(fieldObject{"wall", vector3(-72.2338, -72.2338, -0.622), vector3(72.2338, -70.1968, 11.5368)}); // -Y wall
 
-    // objects.push_back(fieldObject{"alliance_bar", vector3(-13.5945, 70.1062, 10.6686), vector3(13.5945, 72.3031, 14.3549)}); // Blue Alliance Side
-    // objects.push_back(fieldObject{"alliance_bar", vector3(70.1062, -13.5945, 10.6686), vector3(72.3031, 13.5945, 14.3549)}); // Blue Alliance Side
-    // objects.push_back(fieldObject{"alliance_bar", vector3(-72.3031, -13.5945, 10.6686), vector3(-70.1062, 13.5945, 14.3549)}); // Red Alliance Side
-    // objects.push_back(fieldObject{"alliance_bar", vector3(-13.5945, -72.3031, 10.6686), vector3(13.5945, -70.1062, 14.3549)}); // Red Alliance Side
-
     objects.push_back(fieldObject{"loader", vector3(66.4645, 56.346, 3.248), vector3(70.1968, 61.1804, 14.3701)}); // Blue loader tube
     objects.push_back(fieldObject{"loader", vector3(-70.1968, -61.1804, 3.5573), vector3(-66.4645, -56.346, 14.6793)}); // Red loader tube
     objects.push_back(fieldObject{"loader", vector3(66.4645, -61.1804, 3.248), vector3(70.1968, -56.346, 14.3701)}); // Blue loader tube
@@ -47,11 +42,41 @@ vector<distanceSensor> fieldRepresentation::distanceSensors() {
     return sensors;
 }
 
-fieldRepresentation::distanceSensorDistances fieldRepresentation::simulateCast(distanceSensor sensor, vector3 castDirection, vector3 robotPosition) {
-
+fieldRepresentation::distanceSensorDistances fieldRepresentation::simulateCast(distanceSensor sensor, vector3 castDirection) {
+    distanceSensorDistances distances;
+    return distances;
 }
-double fieldRepresentation::hitDistance(fieldObject object, distanceSensor sensor, vector3 robotPosition, double robotHeading)  { //return -1 if not hit
-    vector3 sensorPos = sensor.getPosition() + robotPosition;
+double fieldRepresentation::hitDistance(fieldObject object, distanceSensor sensor)  { //return -1 if not hit
+    //https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes//ray-box-intersection.html
+    vector3 sensorPos = sensor.getPosition();
     vector3 sensorDir = sensor.getDirection();
-    fieldObject obj = object;
+    
+    vector3 objectMax = getMax(object);
+    if (sensorPos.z() > objectMax.z()) return -1;
+    vector3 objectMin = getMin(object);
+    
+    double tmin_x;
+    double tmax_x;
+    if (sensorDir.x() >= 0) { 
+        tmin_x = (objectMin.x() - sensorPos.x()) / sensorDir.x(); 
+        tmax_x = (objectMax.x() - sensorPos.x()) / sensorDir.x(); 
+    } else { 
+        tmin_x = (objectMax.x() - sensorPos.x()) / sensorDir.x();
+        tmax_x = (objectMin.x() - sensorPos.x()) / sensorDir.x(); 
+    }
+
+    double tmin_y;
+    double tmax_y;
+    if (sensorDir.y() >= 0) { 
+        tmin_y = (objectMin.y() - sensorPos.y()) / sensorDir.y(); 
+        tmax_y = (objectMax.y() - sensorPos.y()) / sensorDir.y(); 
+    } else { 
+        tmin_y = (objectMax.y() - sensorPos.y()) / sensorDir.y();
+        tmax_y = (objectMin.y() - sensorPos.y()) / sensorDir.y(); 
+    }
+
+    if (tmin_x > tmax_y || tmin_y > tmax_x) return -1;
+    double tmin = (tmin_x > tmin_y) ? tmin_x : tmin_y;
+    if (tmin < 0) return -1;
+    return tmin;
 }

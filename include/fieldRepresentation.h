@@ -24,7 +24,7 @@ class fieldRepresentation {
             vector3 max;
         };
 
-        double hitDistance(fieldObject object, distanceSensor sensor, vector3 robotPosition, double robotHeading); //return -1 if not hit
+        double hitDistance(fieldObject object, distanceSensor sensor); //return -1 if not hit
 
         static vector<fieldObject> fieldObjects();
         static vector<distanceSensor> distanceSensors();
@@ -35,6 +35,8 @@ class fieldRepresentation {
     public:
         fieldRepresentation(vector<distanceSensor> sensors); // uses fieldObjects()
         fieldRepresentation(vector<distanceSensor> sensors, vector<fieldObject> objects);
-        distanceSensorDistances simulateCast(distanceSensor sensor, vector3 castDirection, vector3 robotPosition);
+        distanceSensorDistances simulateCast(distanceSensor sensor, vector3 castDirection);
+        vector3 getMax(fieldObject object) { return object.max; }
+        vector3 getMin(fieldObject object) { return object.min; }
 
 };
