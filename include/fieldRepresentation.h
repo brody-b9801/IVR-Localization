@@ -23,6 +23,7 @@ class fieldRepresentation {
             string type;
             vector3 min;
             vector3 max;
+            bool interior = false;
         };
 
         static constexpr double maxSensorRange = 78.74; 

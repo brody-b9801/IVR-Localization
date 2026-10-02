@@ -1,5 +1,5 @@
 #include "fieldRepresentation.h"
-#include "mcl.h"
+#include <limits>
 
 fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors) : fieldRepresentation(sensors, fieldObjects()) {}
 fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors, vector<fieldObject> objects) : objects_(objects), sensors_(sensors) {
@@ -18,10 +18,9 @@ fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors, vector<
 vector<fieldRepresentation::fieldObject> fieldRepresentation::fieldObjects() {
     vector<fieldObject> objects;
 
-    objects.push_back(fieldObject{"wall", vector3(70.1968, -70.1968, -0.622), vector3(72.2338, 70.1968, 11.5368)}); // +X wall
-    objects.push_back(fieldObject{"wall", vector3(-72.2338, -70.1968, -0.622), vector3(-70.1968, 70.1968, 11.5368)}); // -X wall
-    objects.push_back(fieldObject{"wall", vector3(-72.2338, 70.1968, -0.622), vector3(72.2338, 72.2338, 11.5368)}); // +Y wall
-    objects.push_back(fieldObject{"wall", vector3(-72.2338, -72.2338, -0.622), vector3(72.2338, -70.1968, 11.5368)}); // -Y wall
+    // all four walls as one box spanning their inner faces, hit from the inside. Kept first so it sets
+    // closestSoFar before the other objects are checked
+    objects.push_back(fieldObject{"wall", vector3(-70.1968, -70.1968, -0.622), vector3(70.1968, 70.1968, 11.5368), true});
 
     objects.push_back(fieldObject{"loader", vector3(66.4645, 56.346, 3.248), vector3(70.1968, 61.1804, 14.3701)}); // Blue loader tube
     objects.push_back(fieldObject{"loader", vector3(-70.1968, -61.1804, 3.5573), vector3(-66.4645, -56.346, 14.6793)}); // Red loader tube
@@ -76,7 +75,6 @@ fieldRepresentation::distanceSensorDistances fieldRepresentation::simulateCast(v
     distances.backDistance = results[2];
     distances.leftDistance = results[3];
     distances.updated = true;
-    MCL::setSensorData(distances);
     return distances;
 }
 
@@ -97,11 +95,17 @@ double fieldRepresentation::hitDistance(const fieldObject& object, vector3 senso
     //https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes//ray-box-intersection.html
     vector3 objectMax = getMax(object);
     vector3 objectMin = getMin(object);
-    // height check is done once per sensor in the constructor (sensorCandidates_)
     
+    constexpr double parallelEpsilon = 1e-9;
+    constexpr double inf = std::numeric_limits<double>::infinity();
+
     double tmin_x;
     double tmax_x;
-    if (sensorDir.x() >= 0) { 
+    if (std::fabs(sensorDir.x()) < parallelEpsilon) {
+        if (sensorPos.x() < objectMin.x() || sensorPos.x() > objectMax.x()) return -1;
+        tmin_x = -inf;
+        tmax_x = inf;
+    } else if (sensorDir.x() > 0) {
         tmin_x = (objectMin.x() - sensorPos.x()) / sensorDir.x(); 
         tmax_x = (objectMax.x() - sensorPos.x()) / sensorDir.x(); 
     } else { 
@@ -113,7 +117,11 @@ double fieldRepresentation::hitDistance(const fieldObject& object, vector3 senso
 
     double tmin_y;
     double tmax_y;
-    if (sensorDir.y() >= 0) { 
+    if (std::fabs(sensorDir.y()) < parallelEpsilon) {
+        if (sensorPos.y() < objectMin.y() || sensorPos.y() > objectMax.y()) return -1;
+        tmin_y = -inf;
+        tmax_y = inf;
+    } else if (sensorDir.y() > 0) {
         tmin_y = (objectMin.y() - sensorPos.y()) / sensorDir.y(); 
         tmax_y = (objectMax.y() - sensorPos.y()) / sensorDir.y(); 
     } else { 
@@ -124,6 +132,7 @@ double fieldRepresentation::hitDistance(const fieldObject& object, vector3 senso
 
     if (tmin_x > tmax_y || tmin_y > tmax_x) return -1;
     double tmin = (tmin_x > tmin_y) ? tmin_x : tmin_y;
+    if (object.interior && tmin < 0) return (tmax_x < tmax_y) ? tmax_x : tmax_y; // sensor inside the box: hit where the ray exits
     if (tmin < 0) return -1;
     return tmin;
 }
