@@ -12,6 +12,10 @@ namespace utilities {
         return radians * 180.0 / std::numbers::pi;
     }
 
+    constexpr double mmToInches(int32_t mm) {
+        return (mm < 0 || mm >= 9999) ? -1 : mm / 25.4;
+    }
+
     class vector3 {
         private:
             double x_;

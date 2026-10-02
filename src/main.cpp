@@ -5,14 +5,7 @@ void initialize() {
     pros::lcd::initialize();
     chassis.calibrate(); 
 	pros::delay(3500);
-    pros::Task screen_task([&]() {
-        while (true) {
-            pros::lcd::print(0, "X: %f", chassis.getPose().x); // x
-            pros::lcd::print(1, "Y: %f", chassis.getPose().y); // y
-            pros::lcd::print(2, "Theta: %f", chassis.getPose().theta); // heading
-            pros::delay(20);
-        }
-    });
+
 }
 
 void disabled() {}

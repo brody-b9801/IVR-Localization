@@ -1,6 +1,7 @@
 #include "fieldRepresentation.h"
 #include <limits>
 
+fieldRepresentation::fieldRepresentation() : fieldRepresentation(distanceSensors(), fieldObjects()) {}
 fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors) : fieldRepresentation(sensors, fieldObjects()) {}
 fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors, vector<fieldObject> objects) : objects_(objects), sensors_(sensors) {
     for (const distanceSensor& sensor : sensors_) {
@@ -18,8 +19,6 @@ fieldRepresentation::fieldRepresentation(vector<distanceSensor> sensors, vector<
 vector<fieldRepresentation::fieldObject> fieldRepresentation::fieldObjects() {
     vector<fieldObject> objects;
 
-    // all four walls as one box spanning their inner faces, hit from the inside. Kept first so it sets
-    // closestSoFar before the other objects are checked
     objects.push_back(fieldObject{"wall", vector3(-70.1968, -70.1968, -0.622), vector3(70.1968, 70.1968, 11.5368), true});
 
     objects.push_back(fieldObject{"loader", vector3(66.4645, 56.346, 3.248), vector3(70.1968, 61.1804, 14.3701)}); // Blue loader tube

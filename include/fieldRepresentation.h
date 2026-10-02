@@ -39,6 +39,7 @@ class fieldRepresentation {
         vector<vector<fieldObject>> sensorCandidates_; 
 
     public:
+        fieldRepresentation(); // uses distanceSensors() and fieldObjects()
         fieldRepresentation(vector<distanceSensor> sensors); // uses fieldObjects()
         fieldRepresentation(vector<distanceSensor> sensors, vector<fieldObject> objects);
         distanceSensorDistances simulateCast(vector3 particlePos, double particleHeading); 
