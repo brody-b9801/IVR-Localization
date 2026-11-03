@@ -67,16 +67,4 @@ void autonomous() {
 		// 50ms so the controller's wireless link can keep up (10ms matches LemLib's loop if tethered over USB)
 		pros::delay(50);
 	}
-} 
-
-void opcontrol() { 
-	left_mg.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
-	right_mg.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
-	while (true) {
-		int dir = master.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
-		int turn = master.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
-		left_mg.move(dir - turn);                     
-		right_mg.move(dir + turn);                    
-		pros::delay(20);                             
-	}
 }
