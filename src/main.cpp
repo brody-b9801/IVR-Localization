@@ -4,8 +4,6 @@
 #include "angled_odom.h"
 #include "telemetry.h"
 
-
-
 void initialize() {
     pros::lcd::initialize();
 	imu.reset(true);
@@ -43,19 +41,13 @@ static double avgVelocity(const pros::MotorGroup& mg) {
 
 void autonomous() {
 	// Brake instead of coasting when LemLib sets the motors to 0
-	left_mg.set_brake_mode_all(pros::E_MOTOR_BRAKE_BRAKE);
-	right_mg.set_brake_mode_all(pros::E_MOTOR_BRAKE_BRAKE);
+	//left_mg.set_brake_mode_all(pros::E_MOTOR_BRAKE_BRAKE);
+	//right_mg.set_brake_mode_all(pros::E_MOTOR_BRAKE_BRAKE);
 
 	chassis.setPose(0,0,0); // -24 -24 0 
 	pros::delay(500);
-	chassis.moveToPose(0, 48, 0, 2000);
-	chassis.turnToHeading(180, 2000);
-	// chassis.moveToPose(24, 24, 90, 2000);
-	// chassis.turnToHeading(180, 2000);	
-	// chassis.moveToPose(24, -24, 180, 2000);
-	// chassis.turnToHeading(270, 2000);
-	// chassis.moveToPose(-24, -24, 270, 2000);
-	// chassis.turnToHeading(0, 2000);
+	chassis.moveToPoint(0, 30, 4000);
+	chassis.turnToHeading(180, 3000);
 
 	// Target setpoint (the destination we want, e.g., 24 inches)
 	const double setpoint = 48.0;
