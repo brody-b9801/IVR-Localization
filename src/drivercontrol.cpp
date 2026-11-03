@@ -71,8 +71,8 @@ static void drive(const DriverProfile& p) {
     }
     int dir = master.get_analog(p.throttle);
     int turn = master.get_analog(p.turn);
-    left_mg.move(dir - turn);
-    right_mg.move(dir + turn);
+    left_mg.move(dir + turn);
+    right_mg.move(dir - turn);
 }
 
 static void runIntake(const DriverProfile& p) {

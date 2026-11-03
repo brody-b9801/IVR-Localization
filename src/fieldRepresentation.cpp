@@ -41,10 +41,11 @@ vector<fieldRepresentation::fieldObject> fieldRepresentation::fieldObjects() {
 
 vector<distanceSensor> fieldRepresentation::distanceSensors() {
     vector<distanceSensor> sensors;
-    sensors.push_back(distanceSensor(0, vector3(-1, 1.75, 3), distanceFront));
-    sensors.push_back(distanceSensor(90, vector3(9.75, 0, 3), distanceRight));
-    sensors.push_back(distanceSensor(180, vector3(-1, -1.75, 3), distanceBack));
-    sensors.push_back(distanceSensor(270, vector3(-10, 0, 3), distanceLeft));
+    // Robot frame: +y = forward (intake), +x = right (brain), z = up, inches from tracking center
+    sensors.push_back(distanceSensor(0,   vector3(-5.523,  5.131, 5.11),  distanceFront)); // intakeside
+    sensors.push_back(distanceSensor(90,  vector3( 7.529,  2.537, 7.235), distanceRight)); // brainside
+    sensors.push_back(distanceSensor(180, vector3(-5.523, -5.226, 4.86),  distanceBack));  // clawside
+    sensors.push_back(distanceSensor(270, vector3(-7.029,  2.669, 6.122), distanceLeft));  // nonbrainside
 
     return sensors;
 }
