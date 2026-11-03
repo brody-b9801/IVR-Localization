@@ -7,7 +7,7 @@ pros::MotorGroup right_mg({1, 2, 3, 4}, pros::MotorGearset::blue);
 lemlib::Drivetrain drivetrain(&left_mg,
                               &right_mg,
                               12.38, // track width
-                              2.621, // wheel size
+                              2.5, // wheel size
                               600, // drivetrain rpm
                               2 // horizontal drift
 );
@@ -21,6 +21,10 @@ pros::Distance distanceFront(9);
 pros::Distance distanceLeft(8);
 pros::Distance distanceRight(20);
 pros::Distance distanceBack(19);
+
+Intake intake();//Add intake motor port
+Cascade cascade();//Fill in constructor
+Claw claw();//Fill in constructor
 
 lemlib::OdomSensors sensors(nullptr,
                             nullptr,
