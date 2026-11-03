@@ -1,8 +1,8 @@
 #include "robot.h"
 
 pros::Controller master(pros::E_CONTROLLER_MASTER);
-pros::MotorGroup left_mg({-11, -12, -13, -14}, pros::MotorGearset::blue);
-pros::MotorGroup right_mg({1, 2, 3, 4}, pros::MotorGearset::blue);
+pros::MotorGroup left_mg({-4, -7, -9, -10}, pros::MotorGearset::blue);
+pros::MotorGroup right_mg({11, 12, 13, 1}, pros::MotorGearset::blue);
 
 lemlib::Drivetrain drivetrain(&left_mg,
                               &right_mg,
@@ -12,19 +12,18 @@ lemlib::Drivetrain drivetrain(&left_mg,
                               2 // horizontal drift
 );
 
-pros::Imu imu(5);
+pros::Imu imu(21);
 pros::adi::Encoder back_left_encoder('A', 'B', true);
 pros::adi::Encoder back_right_encoder('C', 'D', true);
 
-//Placeholders
-pros::Distance distanceFront(9);
-pros::Distance distanceLeft(8);
-pros::Distance distanceRight(20);
-pros::Distance distanceBack(19);
+pros::Distance distanceFront(2);
+pros::Distance distanceLeft(14);
+pros::Distance distanceRight(15);
+pros::Distance distanceBack(18);
 
-Intake intake();//Add intake motor port
-Cascade cascade();//Fill in constructor
-Claw claw();//Fill in constructor
+Intake intake(-5);
+Cascade cascade(-3, 6, 17, 0.709, 3);
+Claw claw('H', false, 'G', false, 'F', false); //whole system - actuator, claw clamp, wrist flipper - left to right
 
 lemlib::OdomSensors sensors(nullptr,
                             nullptr,
